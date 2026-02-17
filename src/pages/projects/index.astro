@@ -4,6 +4,7 @@ import Base from '@layouts/Base.astro';
 import PageContainer from '@components/PageContainer.astro';
 import PageHeader from '@components/PageHeader.astro';
 import CardGrid from '@components/CardGrid.astro';
+import { resolvePath } from '@lib/pathUtils';
 
 const projects = await getCollection('projects');
 ---
@@ -26,7 +27,7 @@ const projects = await getCollection('projects');
             
             <div class="card-actions justify-end mt-4">
               {project.data.link && (
-                <a href={`/projects/${project.data.id}`} class="btn btn-primary btn-sm">
+                <a href={resolvePath(`/projects/${project.data.id}`)} class="btn btn-primary btn-sm">
                   Learn More
                 </a>
               )}
@@ -38,7 +39,7 @@ const projects = await getCollection('projects');
 
     {projects.length === 0 && (
       <div class="text-center py-20 bg-base-200 rounded-3xl border-2 border-dashed border-base-300">
-        <p class="text-xl text-base-content/40 font-medium">No news stories found.</p>
+        <p class="text-xl text-base-content/40 font-medium">No projects found.</p>
       </div>
     )}
   </PageContainer>

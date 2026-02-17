@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import Base from '../layouts/Base.astro';
-import PageContainer from '../components/PageContainer.astro';
-import SectionTitle from '../components/SectionTitle.astro';
+import Base from '@layouts/Base.astro';
+import PageContainer from '@components/PageContainer.astro';
+import SectionTitle from '@components/SectionTitle.astro';
 import { getCollection } from 'astro:content';
 
 const allNews = await getCollection('news');
@@ -11,6 +11,7 @@ const recentNews = allNews
   .slice(0, 3);
 
 import labLogo from '../assets/logo-circle.svg';
+import { resolvePath } from '@lib/pathUtils';
 ---
 
 <Base title="Home | ADMT Lab">
@@ -32,7 +33,7 @@ import labLogo from '../assets/logo-circle.svg';
       <SectionTitle title="Our Research" variant="primary" size="large" />
       <p class="text-justify leading-relaxed">
         The Advanced Data Management Technologies Laboratory at the University of Pittsburgh, founded in 1996, is co-directed by Panos K. Chrysanthis and Alexandros Labrinidis. Research projects cover the entire data life cycle, from data acquisition, to data processing, exploration and analysis, to data dissemination and the approach taken is user-centric: emphasis is given on Quality of Service (QoS) and Quality of Data (QoD) returned to the users, and on controlling the trade-off between QoS and QoD, in a way that is prescribed by the users.
-
+        
         Our research projects cover the entire data life-cycle, contributing to the understanding of data management and the development of context-aware algorithms, protocols and prototypes. Several of our projects are interdisciplinary and collaborative with groups within and outside Pitt and abroad.
 
         Their underlying philosophy is to exploit semantics of the data and cross-layer optimizations in hardware-software stacks to offer the best personalized user experience.
@@ -49,13 +50,13 @@ import labLogo from '../assets/logo-circle.svg';
   <section class="py-12">
     <div class="flex justify-between items-end mb-8">
       <SectionTitle title="Recent News" variant="primary" size="large" spacing="tight" />
-      <a href="/news" class="link link-primary font-semibold">View All News →</a>
+      <a href={resolvePath("/news")} class="link link-primary font-semibold">View All News →</a>
     </div>
 
     <div class="space-y-4">
       {recentNews.map((story) => (
         <a 
-          href={`/news/${story.id}`} 
+          href={resolvePath(`/news/${story.id}`)} 
           class="block bg-base-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-base-200 group"
         >
           <div class="flex flex-col md:flex-row md:items-center gap-4">

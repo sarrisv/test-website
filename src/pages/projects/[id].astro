@@ -5,6 +5,8 @@ import Base from '@layouts/Base.astro';
 import PageContainer from '@components/PageContainer.astro';
 import PageHeader from '@components/PageHeader.astro';
 import SectionTitle from '@components/SectionTitle.astro';
+import { resolvePath } from '@lib/pathUtils';
+import { getPersonInfo } from '@lib/personUtils';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -18,11 +20,6 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const people = await getCollection('people');
-
-function getPersonInfo(id) {
-  const person = people.find(p => p.data.id === id);
-  return person ? { name: person.data.fullname, found: true } : { name: id, found: false };
-}
 ---
 
 <Base title={`${project.data.title} | ADMT Lab`}>
@@ -45,11 +42,11 @@ function getPersonInfo(id) {
                 <h4 class="text-lg font-semibold text-base-content/90 mb-2">Faculty</h4>
                 <ul class="list-disc list-inside space-y-1">
                   {project.data.team.faculty.map(member => {
-                    const personInfo = getPersonInfo(member);
+                    const personInfo = getPersonInfo(member, people);
                     return (
                       <li>
                         {personInfo.found ? (
-                          <a href={`/people/${member}`} class="link link-primary">{personInfo.name}</a>
+                          <a href={resolvePath(`/people/${member}`)} class="link link-primary">{personInfo.name}</a>
                         ) : (
                           <span class="text-base-content/80">{personInfo.name}</span>
                         )}
@@ -65,11 +62,11 @@ function getPersonInfo(id) {
                 <h4 class="text-lg font-semibold text-base-content/90 mb-2">Collaborators</h4>
                 <ul class="list-disc list-inside space-y-1">
                   {project.data.team.collaborators.map(member => {
-                    const personInfo = getPersonInfo(member);
+                    const personInfo = getPersonInfo(member, people);
                     return (
                       <li>
                         {personInfo.found ? (
-                          <a href={`/people/${member}`} class="link link-primary">{personInfo.name}</a>
+                          <a href={resolvePath(`/people/${member}`)} class="link link-primary">{personInfo.name}</a>
                         ) : (
                           <span class="text-base-content/80">{personInfo.name}</span>
                         )}
@@ -85,11 +82,11 @@ function getPersonInfo(id) {
                 <h4 class="text-lg font-semibold text-base-content/90 mb-2">Graduate Students</h4>
                 <ul class="list-disc list-inside space-y-1">
                   {project.data.team.gradStudents.map(member => {
-                    const personInfo = getPersonInfo(member);
+                    const personInfo = getPersonInfo(member, people);
                     return (
                       <li>
                         {personInfo.found ? (
-                          <a href={`/people/${member}`} class="link link-primary">{personInfo.name}</a>
+                          <a href={resolvePath(`/people/${member}`)} class="link link-primary">{personInfo.name}</a>
                         ) : (
                           <span class="text-base-content/80">{personInfo.name}</span>
                         )}
@@ -105,11 +102,11 @@ function getPersonInfo(id) {
                 <h4 class="text-lg font-semibold text-base-content/90 mb-2">Undergraduate Students</h4>
                 <ul class="list-disc list-inside space-y-1">
                   {project.data.team.ugradStudents.map(member => {
-                    const personInfo = getPersonInfo(member);
+                    const personInfo = getPersonInfo(member, people);
                     return (
                       <li>
                         {personInfo.found ? (
-                          <a href={`/people/${member}`} class="link link-primary">{personInfo.name}</a>
+                          <a href={resolvePath(`/people/${member}`)} class="link link-primary">{personInfo.name}</a>
                         ) : (
                           <span class="text-base-content/80">{personInfo.name}</span>
                         )}
@@ -137,7 +134,7 @@ function getPersonInfo(id) {
           <SectionTitle title="Links" variant="primary" />
           <ul>
             {project.data.links.map(link => (
-              <li><a href={link.url} target="_blank" rel="noopener noreferrer" class="link link-primary">{link.label}</a></li>
+              <li><a href={resolvePath(link.url)} target="_blank" rel="noopener noreferrer" class="link link-primary">{link.label}</a></li>
             ))}
           </ul>
         </div>
@@ -148,7 +145,7 @@ function getPersonInfo(id) {
           <SectionTitle title="Press Coverage" variant="primary" />
           <ul>
             {project.data.press.map(article => (
-              <li><a href={article.url} target="_blank" rel="noopener noreferrer" class="link link-primary">{article.label}</a></li>
+              <li><a href={resolvePath(article.url)} target="_blank" rel="noopener noreferrer" class="link link-primary">{article.label}</a></li>
             ))}
           </ul>
         </div>

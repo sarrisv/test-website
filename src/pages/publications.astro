@@ -1,10 +1,10 @@
 ---
-import Base from '../layouts/Base.astro';
-import PubCard from '../components/PubCard.astro';
-import PageContainer from '../components/PageContainer.astro';
-import PageHeader from '../components/PageHeader.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-import { getPublications } from '../lib/pubUtils.js';
+import Base from '@layouts/Base.astro';
+import PubCard from '@components/PubCard.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import { getPublications } from '@lib/pubUtils.js';
 
 const publicationsByYear = await getPublications();
 ---
@@ -103,7 +103,6 @@ const publicationsByYear = await getPublications();
       const text = bibtexContent.textContent;
       navigator.clipboard.writeText(text);
       
-      // Optional: Visual feedback
       const originalText = copyBibtexBtn.textContent;
       copyBibtexBtn.textContent = 'Copied!';
       setTimeout(() => {

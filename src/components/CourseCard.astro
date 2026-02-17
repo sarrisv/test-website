@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { resolvePath } from '@lib/pathUtils';
+import { getPersonInfo } from '@lib/personUtils';
 
 interface Props {
   course: CollectionEntry<'courses'>;
@@ -8,11 +10,6 @@ interface Props {
 }
 
 const { course, people, isCurrent } = Astro.props;
-
-function getPersonInfo(id: string) {
-  const person = people.find(p => p.data.id === id);
-  return person ? { name: person.data.fullname, found: true } : { name: id, found: false };
-}
 ---
 
 <div class="card bg-base-100 shadow-lg">
@@ -31,11 +28,11 @@ function getPersonInfo(id: string) {
       <div class="mb-2">
         <span class="font-semibold">Current Instructor(s): </span>
         {course.data.instructorIds.map((instructorId, index) => {
-          const personInfo = getPersonInfo(instructorId);
+          const personInfo = getPersonInfo(instructorId, people);
           return (
             <span>
               {personInfo.found ? (
-                <a href={`/people/${instructorId}`} class="link link-primary">{personInfo.name}</a>
+                <a href={resolvePath(`/people/${instructorId}`)} class="link link-primary">{personInfo.name}</a>
               ) : (
                 personInfo.name
               )}
@@ -50,11 +47,11 @@ function getPersonInfo(id: string) {
       <div class="text-sm text-base-content/70">
         <span class="font-semibold">{isCurrent ? 'Previously taught by: ' : 'Taught by: '}</span>
         {course.data.previousInstructorIds.map((instructorId, index) => {
-          const personInfo = getPersonInfo(instructorId);
+          const personInfo = getPersonInfo(instructorId, people);
           return (
             <span>
               {personInfo.found ? (
-                <a href={`/people/${instructorId}`} class="link link-primary">{personInfo.name}</a>
+                <a href={resolvePath(`/people/${instructorId}`)} class="link link-primary">{personInfo.name}</a>
               ) : (
                 personInfo.name
               )}

@@ -1,33 +1,30 @@
 ---
+import { resolvePath, isActive } from "@lib/pathUtils";
 import { Image } from "astro:assets";
+import labLogo from "../assets/logo-full.svg";
 
 const { pathname } = Astro.url;
-
-const isActive = (path: string) => {
-  if (path === "/" && pathname !== "/") return false;
-  return pathname.startsWith(path);
-};
-
-import labLogo from "../assets/logo-full.svg";
 
 const navLinks = [
   { name: "About", href: "/" },
   { name: "Publications", href: "/publications" },
   { name: "Projects", href: "/projects" },
   { name: "Courses", href: "/courses" },
-];
-
-const peopleLinks = [
-  { name: "Faculty", href: "/people/faculty" },
-  { name: "Students", href: "/people/students" },
-  { name: "Alumni", href: "/people/alumni" },
+  { name: "People", href: "/people",
+    children: [
+      { name: "Faculty", href: "/faculty" },
+      { name: "Students", href: "/students" },
+      { name: "Alumni", href: "/alumni" },
+    ]
+  },
+  { name: "News", href: "/news" },
 ];
 ---
 
 <div class="navbar bg-base-100 shadow-sm px-6 md:px-10 py-3 sticky top-0 z-50 relative">
   <!-- LEFT SIDE: Logo stays here -->
   <div class="navbar-start">
-    <a href="/" class="btn btn-ghost normal-case text-2xl flex items-center gap-2">
+    <a href={resolvePath("/")} class="btn btn-ghost normal-case text-2xl flex items-center gap-2">
        <Image src={labLogo} alt="ADMT Logo" class="h-12 w-auto" loading="eager"/>
     </a>
   </div>
@@ -37,31 +34,30 @@ const peopleLinks = [
     
     <!-- Desktop Horizontal Menu (Hidden on mobile) -->
     <ul class="menu menu-horizontal px-1 gap-2 hidden lg:flex text-lg">
-      {navLinks.map(link => (
+      {navLinks.map(item => (
         <li>
-          <a href={link.href} class={isActive(link.href) ? "bg-primary/10 text-primary font-semibold" : ""}>
-            {link.name}
-          </a>
+          {item.children ? (
+            <details>
+              <summary class={isActive(pathname, item.href) ? "bg-primary/10 text-primary font-semibold" : ""}>{item.name}</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none shadow-md w-44 z-[1]">
+                {item.children.map(child => (
+                  <li>
+                    <a href={resolvePath(`${item.href}${child.href}`)}>
+                      {child.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <a href={resolvePath(item.href)} class={isActive(pathname, item.href) ? "bg-primary/10 text-primary font-semibold" : ""}>
+              {item.name}
+            </a>
+          )}
         </li>
       ))}
-      
-      <li>
-        <details>
-          <summary>People</summary>
-          <ul class="p-2 bg-base-100 rounded-t-none shadow-md w-44 z-[1]">
-            {peopleLinks.map(link => (
-              <li><a href={link.href} class={isActive(link.href) ? "active" : ""} aria-label={link.name}>{link.name}</a></li>
-            ))}
-          </ul>
-        </details>
-      </li>
-
-      <li>
-        <a href="/news" class={isActive("/news") ? "bg-primary/10 text-primary font-semibold" : ""}>
-          News
-        </a>
-      </li>
     </ul>
+    
 
     <!-- Mobile Hamburger Menu (Hidden on desktop) -->
     <!-- Added 'dropdown-end' so the menu opens aligned to the right -->
@@ -72,19 +68,28 @@ const peopleLinks = [
         </svg>
       </div>
       <ul tabindex="0" class="menu menu-lg dropdown-content absolute top-full left-0 right-0 h-[calc(100vh-100%)] w-full bg-base-100 border-t border-base-200 shadow-none overflow-y-auto p-4 gap-2">
-        {navLinks.map(link => (
-          <li><a href={link.href} class={isActive(link.href) ? "active text-xl py-4" : "text-xl py-4" } aria-label={link.name}>{link.name}</a></li>
+        {navLinks.map(item => (
+          <li>
+            {item.children ? (
+              <details open={isActive(pathname, item.href)}>
+                <summary class={isActive(pathname, item.href) ? "bg-primary/10 text-primary font-semibold" : ""}>{item.name}</summary>
+                <ul class="p-2 bg-base-100 rounded-t-none shadow-md z-[1]">
+                  {item.children.map(child => (
+                    <li>
+                      <a href={resolvePath(`${item.href}${child.href}`)}>
+                        {child.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ) : (
+              <a href={resolvePath(item.href)} class={isActive(pathname, item.href) ? "bg-primary/10 text-primary font-semibold" : ""}>
+                {item.name}
+              </a>
+            )}
+          </li>
         ))}
-        <li>
-          <details>
-            <summary class="text-xl py-4">People</summary>
-            <ul>
-              {peopleLinks.map(link => (
-                <li><a href={link.href} class={isActive(link.href) ? "active text-lg py-3" : "text-lg py-3"}>{link.name}</a></li>
-              ))}
-            </ul>
-          </details>
-        <li><a href="/news" class={isActive("/news") ? "active text-xl py-4" : "text-xl py-4"}>News</a></li>
       </ul>
     </div>
 

@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import Base from '../layouts/Base.astro';
-import PageContainer from '../components/PageContainer.astro';
-import PageHeader from '../components/PageHeader.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-import CourseCard from '../components/CourseCard.astro';
+import Base from '@layouts/Base.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import CourseCard from '@components/CourseCard.astro';
 
 const courses = await getCollection('courses');
 const people = await getCollection('people');

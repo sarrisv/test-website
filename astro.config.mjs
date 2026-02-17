@@ -4,8 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   // site: "https://db.cs.pitt.edu",
-  site: "https://sarrisv.github.io",
-  base: '/temp-website',
+  // base: '/stage',
+  site: "https://sites.pitt.edu",
+  base: "/~vas82",
   integrations: [
     sitemap({
       filter: (page) => !page.endsWith('.pdf') && !page.includes('404'),

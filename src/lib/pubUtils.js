@@ -1,9 +1,9 @@
 import { Cite } from '@citation-js/core';
 import '@citation-js/plugin-bibtex';
-import fs from 'fs';
+import fs from 'fs/promises';
 
 export async function getPublications() {
-  const bibFile = fs.readFileSync('./src/content/papers.bib', 'utf8');
+  const bibFile = await fs.readFile('./src/content/papers.bib', 'utf8');
   
   // Parse custom fields directly from the raw BibTeX text
   const customFields = {};

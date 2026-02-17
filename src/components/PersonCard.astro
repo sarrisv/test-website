@@ -1,5 +1,11 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
+import { resolvePath } from '@lib/pathUtils';
+
+interface Props {
+  person: CollectionEntry<'people'>;
+}
 
 const { person } = Astro.props;
 ---
@@ -21,7 +27,7 @@ const { person } = Astro.props;
       
       <div class="flex-1 min-w-0">
         <h3 class="font-bold text-xl">
-          <a href={`/people/${person.data.id}`} class="link link-hover">{person.data.fullname}</a>
+          <a href={resolvePath(`/people/${person.data.id}`)} class="link link-hover">{person.data.fullname}</a>
         </h3>
         
         {person.data.department && (

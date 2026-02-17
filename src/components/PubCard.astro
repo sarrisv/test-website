@@ -1,4 +1,6 @@
 ---
+import { resolvePath } from "@lib/pathUtils";
+
 const { paper } = Astro.props;
 const authorList = paper.authors.map(a => `${a.given} ${a.family}`).join(", ");
 
@@ -16,17 +18,17 @@ const searchableText = [
 <div class="pub-entry border-l-4 border-primary pl-4 py-4 mb-6 hover:bg-base-200 transition-colors" data-search-text={searchableText}>
   <h3 class="text-lg font-bold leading-tight">{paper.title}</h3>
   <p class="text-sm text-base-content/70 my-1">{authorList}</p>
-  <p class="text-sm italic italic">{paper.venue} {paper.year}</p>
+  <p class="text-sm italic">{paper.venue} {paper.year}</p>
 
   <div class="flex flex-wrap gap-2 mt-3">
     {paper.doi && (
       <a href={`https://doi.org/${paper.doi}`} target="_blank" class="btn btn-xs btn-outline">DOI</a>
     )}
     {paper.pdf && (
-      <a href={`/papers/${paper.pdf}`} target="_blank" class="btn btn-xs btn-outline">PDF</a>
+      <a href={resolvePath(`/papers/${paper.pdf}`)} target="_blank" class="btn btn-xs btn-outline">PDF</a>
     )}
     {paper.slides && (
-      <a href={`/slides/${paper.slides}`} target="_blank" class="btn btn-xs btn-outline">Slides</a>
+      <a href={resolvePath(`/slides/${paper.slides}`)} target="_blank" class="btn btn-xs btn-outline">Slides</a>
     )}
     {paper.code && (
       <a href={paper.code} target="_blank" class="btn btn-xs btn-outline">Code</a>

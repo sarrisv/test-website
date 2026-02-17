@@ -1,14 +1,15 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import { resolvePath } from '@lib/pathUtils';
 import '../styles/global.css'; // Ensure Tailwind is imported
 
 const { title = "ADMT Lab | University of Pittsburgh" } = Astro.props;
 ---
 
-<html lang="en" data-theme="pitt"> <!-- You can change the DaisyUI theme here -->
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href={resolvePath("/favicon.png")} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
