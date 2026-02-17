@@ -22,14 +22,14 @@ const { person, people } = Astro.props;
 
 <Base title={`${person.data.fullname} | ADMT Lab`}>
   <PageContainer width="narrow">
-    <header class="mb-12 flex flex-col md:flex-row gap-8 items-start">
+    <header class="mb-12 flex flex-col md:flex-row gap-12 items-center">
       <div class="avatar flex-shrink-0">
         <div class="w-48 h-48 rounded-full ring ring-primary ring-offset-4 ring-offset-base-100">
           <Image src={person.data.image} alt={person.data.fullname} class="object-cover" />
         </div>
       </div>
       
-      <div class="flex-1 pt-2">
+      <div class="flex-1">
         <h1 class="text-4xl md:text-5xl font-bold mb-3">{person.data.fullname}</h1>
         {person.data.shortname && person.data.shortname !== person.data.fullname && (
           <p class="text-xl text-base-content/80 mb-2">({person.data.shortname})</p>
