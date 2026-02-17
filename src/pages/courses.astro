@@ -1,13 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '@layouts/Base.astro';
 import PageContainer from '@components/PageContainer.astro';
 import PageHeader from '@components/PageHeader.astro';
 import SectionTitle from '@components/SectionTitle.astro';
 import CourseCard from '@components/CourseCard.astro';
+import { getCourses, getPeople } from '@lib/dataProvider';
 
-const courses = await getCollection('courses');
-const people = await getCollection('people');
+const courses = await getCourses();
+const people = await getPeople();
 
 const currentCourses = courses.filter(course => course.data.status === 'current');
 const previousCourses = courses.filter(course => course.data.status === 'previous');
@@ -23,22 +23,26 @@ const previousCourses = courses.filter(course => course.data.status === 'previou
     {currentCourses.length > 0 && (
       <section class="mb-12">
         <SectionTitle title="Current Courses" variant="primary" />
-        <div class="grid gap-6">
+        <ul class="grid gap-6">
           {currentCourses.map(course => (
-            <CourseCard course={course} people={people} isCurrent={true} />
+            <li>
+              <CourseCard course={course} people={people} isCurrent={true} />
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     )}
 
     {previousCourses.length > 0 && (
       <section class="mb-12">
         <SectionTitle title="Previous Courses" variant="primary" />
-        <div class="grid gap-6">
+        <ul class="grid gap-6">
           {previousCourses.map(course => (
-            <CourseCard course={course} people={people} isCurrent={false} />
+            <li>
+              <CourseCard course={course} people={people} isCurrent={false} />
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     )}
   </PageContainer>

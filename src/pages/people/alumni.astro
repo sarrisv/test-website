@@ -1,14 +1,14 @@
 ---
-import { getCollection } from "astro:content";
-import Base from "@layouts/Base.astro";
-import PersonCard from "@components/PersonCard.astro";
-import PageContainer from "@components/PageContainer.astro";
-import PageHeader from "@components/PageHeader.astro";
-import SectionTitle from "@components/SectionTitle.astro";
-import CardGrid from "@components/CardGrid.astro";
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import PersonCard from '@components/PersonCard.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import CardGrid from '@components/CardGrid.astro';
 
-const people = await getCollection("people");
-const alumni = people.filter((person) => person.data.roles?.includes("alumni"));
+const people = await getCollection('people');
+const alumni = people.filter((person) => person.data.roles?.includes('alumni'));
 
 function getMostRecentDegree(person) {
   if (!person.data.degrees || person.data.degrees.length === 0) return null;
@@ -22,15 +22,15 @@ function getMostRecentDegree(person) {
 
 const phdAlumni = alumni.filter((person) => {
   const recentDegree = getMostRecentDegree(person);
-  return recentDegree?.level === "phd";
+  return recentDegree?.level === 'phd';
 });
 const msAlumni = alumni.filter((person) => {
   const recentDegree = getMostRecentDegree(person);
-  return recentDegree?.level === "ms";
+  return recentDegree?.level === 'ms';
 });
 const bsAlumni = alumni.filter((person) => {
   const recentDegree = getMostRecentDegree(person);
-  return recentDegree?.level === "bs";
+  return recentDegree?.level === 'bs';
 });
 ---
 

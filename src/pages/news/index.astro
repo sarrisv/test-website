@@ -32,35 +32,39 @@ const years = Object.keys(newsByYear).sort((a, b) => Number(b) - Number(a));
              <SectionTitle title={year.toString()} variant="primary" />
           </div>
           
-          <div class="flex flex-col gap-6">
+          <ul class="flex flex-col gap-6">
             {newsByYear[Number(year)].map((post) => (
-              <a 
-                href={resolvePath(`/news/${post.id}`)} 
-                class="card md:card-side bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border border-base-200 overflow-hidden group"
-              >
-                <figure class="md:w-64 shrink-0 h-48 md:h-auto relative">
-                  <Image 
-                    src={post.data.image} 
-                    alt={post.data.title}
-                    width={400} 
-                    height={400}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </figure>
-                <div class="card-body">
-                  <span class="text-sm font-semibold text-primary/80">
-                    {post.data.date.toLocaleDateString('en-US', { 
-                      month: 'long', 
-                      day: 'numeric' 
-                    })}
-                  </span>
-                  <h3 class="card-title text-xl font-bold group-hover:text-primary transition-colors">
-                    {post.data.title}
-                  </h3>
-                </div>
-              </a>
+              <li>
+                <article>
+                  <a 
+                    href={resolvePath(`/news/${post.id}`)} 
+                    class="card md:card-side bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border border-base-200 overflow-hidden group"
+                  >
+                    <figure class="md:w-64 shrink-0 h-48 md:h-auto relative">
+                      <Image 
+                        src={post.data.image} 
+                        alt={post.data.title}
+                        width={400} 
+                        height={400}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </figure>
+                    <div class="card-body">
+                      <time class="text-sm font-semibold text-primary/80">
+                        {post.data.date.toLocaleDateString('en-US', { 
+                          month: 'long', 
+                          day: 'numeric' 
+                        })}
+                      </time>
+                      <h3 class="card-title text-xl font-bold group-hover:text-primary transition-colors">
+                        {post.data.title}
+                      </h3>
+                    </div>
+                  </a>
+                </article>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       ))}
     </div>

@@ -12,7 +12,7 @@ interface Props {
 const { course, people, isCurrent } = Astro.props;
 ---
 
-<div class="card bg-base-100 shadow-lg">
+<article class="card bg-base-100 shadow-lg">
   <div class="card-body">
     <h3 class="card-title text-lg">
       {course.data.url ? (
@@ -62,4 +62,4 @@ const { course, people, isCurrent } = Astro.props;
       </div>
     )}
   </div>
-</div>
+</article>

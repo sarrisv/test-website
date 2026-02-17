@@ -10,10 +10,10 @@ interface Props {
 const { person } = Astro.props;
 ---
 
-<div class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
+<article class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
   <div class="card-body p-6">
     <div class="flex items-center gap-5">
-      <div class="avatar flex-shrink-0">
+      <figure class="avatar flex-shrink-0">
         <div class="w-24 h-24 rounded-full ring ring-primary ring-offset-4">
           <Image 
             src={person.data.image} 
@@ -23,7 +23,7 @@ const { person } = Astro.props;
             height={96}
           />
         </div>
-      </div>
+      </figure>
       
       <div class="flex-1 min-w-0">
         <h3 class="font-bold text-xl">
@@ -36,4 +36,4 @@ const { person } = Astro.props;
       </div>
     </div>
   </div>
-</div>
+</article>

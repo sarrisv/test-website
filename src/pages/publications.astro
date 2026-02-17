@@ -16,8 +16,9 @@ const publicationsByYear = await getPublications();
       subtitle="Research publications from the ADMT Lab" 
     />
 
-    <div class="sticky top-4 z-10 mb-12">
+    <section class="sticky top-4 z-10 mb-12">
       <div class="relative">
+        <label for="pubSearch" class="sr-only">Search publications</label>
         <input 
           type="text" 
           id="pubSearch" 
@@ -25,25 +26,31 @@ const publicationsByYear = await getPublications();
           class="input input-bordered w-full pr-20 shadow-lg"
         />
         <button 
+          type="button"
           id="clearSearch"
           class="btn btn-ghost btn-sm absolute right-2 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity"
           title="Clear search"
+          aria-label="Clear search"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-      <div id="searchStatus" class="text-sm text-base-content/70 mt-2 hidden"></div>
-    </div>
+      <div id="searchStatus" class="text-sm text-base-content/70 mt-2 hidden" aria-live="polite"></div>
+    </section>
 
     <div id="pubList">
       {publicationsByYear.map(group => (
         <section class="year-group mb-12">
           <SectionTitle title={group.year.toString()} variant="primary" />
-          {group.papers.map(paper => (
-            <PubCard paper={paper} />
-          ))}
+          <ul>
+            {group.papers.map(paper => (
+              <li>
+                <PubCard paper={paper} />
+              </li>
+            ))}
+          </ul>
         </section>
       ))}
     </div>
@@ -73,123 +80,8 @@ const publicationsByYear = await getPublications();
     </form>
   </dialog>
 
-  <!-- Enhanced Search & Modal Logic -->
-  <script is:inline>
-    const searchInput = document.getElementById('pubSearch');
-    const clearButton = document.getElementById('clearSearch');
-    const searchStatus = document.getElementById('searchStatus');
-    const entries = document.querySelectorAll('.pub-entry');
-    const sections = document.querySelectorAll('.year-group');
-    
-    // Modal Elements
-    const bibtexModal = document.getElementById('bibtexModal');
-    const bibtexContent = document.getElementById('bibtexContent');
-    const copyBibtexBtn = document.getElementById('copyBibtexBtn');
-    
-    let searchTimeout;
-    const totalEntries = entries.length;
-
-    // --- Modal Logic ---
-    document.addEventListener('click', (e) => {
-      const btn = e.target.closest('.js-bib-btn');
-      if (btn) {
-        const bibtex = decodeURIComponent(btn.dataset.bibtex);
-        bibtexContent.textContent = bibtex;
-        bibtexModal.showModal();
-      }
-    });
-
-    copyBibtexBtn.addEventListener('click', () => {
-      const text = bibtexContent.textContent;
-      navigator.clipboard.writeText(text);
-      
-      const originalText = copyBibtexBtn.textContent;
-      copyBibtexBtn.textContent = 'Copied!';
-      setTimeout(() => {
-        copyBibtexBtn.textContent = originalText;
-      }, 2000);
-    });
-
-    // --- Search Logic ---
-
-    function escapeRegExp(string) {
-      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    function highlightText(entry, terms) {
-      const targets = entry.querySelectorAll('h3, p');
-      
-      targets.forEach(target => {
-        const text = target.textContent;
-        
-        if (terms.length === 0) {
-           target.innerHTML = text;
-           return;
-        }
-
-        const pattern = terms.map(escapeRegExp).join('|');
-        const regex = new RegExp(`(${pattern})`, 'gi');
-        
-        target.innerHTML = text.replace(regex, '<mark class="bg-info/30 rounded-sm">$1</mark>');
-      });
-    }
-
-    function performSearch(query) {
-      const searchTerms = query.toLowerCase().split(/\s+/).filter(term => term.length > 0);
-      let visibleCount = 0;
-
-      entries.forEach(entry => {
-        const text = entry.getAttribute('data-search-text');
-        
-        const matches = searchTerms.length === 0 || searchTerms.every(term => text.includes(term));
-        
-        entry.style.display = matches ? 'block' : 'none';
-        if (matches) {
-          visibleCount++;
-          highlightText(entry, searchTerms);
-        }
-      });
-
-      sections.forEach(section => {
-        const visibleEntries = section.querySelectorAll('.pub-entry[style="display: block;"]');
-        section.style.display = visibleEntries.length > 0 || query === "" ? 'block' : 'none';
-      });
-
-      if (query === "") {
-        searchStatus.classList.add('hidden');
-        clearButton.classList.remove('opacity-100');
-        clearButton.classList.add('opacity-0');
-      } else {
-        searchStatus.classList.remove('hidden');
-        searchStatus.textContent = `Showing ${visibleCount} of ${totalEntries} publications`;
-        clearButton.classList.remove('opacity-0');
-        clearButton.classList.add('opacity-100');
-      }
-    }
-
-    searchInput.addEventListener('input', (e) => {
-      clearTimeout(searchTimeout);
-      searchTimeout = setTimeout(() => {
-        performSearch(e.target.value);
-      }, 150);
-    });
-
-    clearButton.addEventListener('click', () => {
-      searchInput.value = '';
-      performSearch('');
-      searchInput.focus();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
-        e.preventDefault();
-        searchInput.focus();
-      }
-      if (e.key === 'Escape' && e.target === searchInput) {
-        clearButton.click();
-      }
-    });
-
-    performSearch('');
+  <script>
+    import { initPublicationSearch } from '@lib/publicationSearch.js';
+    initPublicationSearch();
   </script>
 </Base>

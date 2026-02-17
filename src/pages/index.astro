@@ -3,15 +3,14 @@ import { Image } from 'astro:assets';
 import Base from '@layouts/Base.astro';
 import PageContainer from '@components/PageContainer.astro';
 import SectionTitle from '@components/SectionTitle.astro';
-import { getCollection } from 'astro:content';
+import { resolvePath } from '@lib/pathUtils';
+import { getNews } from '@lib/dataProvider';
+import labLogo from '../assets/logo-circle.svg';
 
-const allNews = await getCollection('news');
+const allNews = await getNews();
 const recentNews = allNews
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
-
-import labLogo from '../assets/logo-circle.svg';
-import { resolvePath } from '@lib/pathUtils';
 ---
 
 <Base title="Home | ADMT Lab">
@@ -53,38 +52,40 @@ import { resolvePath } from '@lib/pathUtils';
       <a href={resolvePath("/news")} class="link link-primary font-semibold">View All News →</a>
     </div>
 
-    <div class="space-y-4">
+    <ul class="space-y-4">
       {recentNews.map((story) => (
-        <a 
-          href={resolvePath(`/news/${story.id}`)} 
-          class="block bg-base-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-base-200 group"
-        >
-          <div class="flex flex-col md:flex-row md:items-center gap-4">
-            <div class="flex-grow">
-              <div class="whitespace-nowrap mb-1">
-                <span class="text-sm text-base-content/60">
-                  {story.data.date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                  })}
-                </span>
-              </div>
-              
-              <h3 class="text-xl font-bold group-hover:text-primary transition-colors">
-                {story.data.title}
-              </h3>
-            </div>
+        <li>
+          <article>
+            <a 
+              href={resolvePath(`/news/${story.id}`)} 
+              class="block bg-base-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-base-200 group"
+            >
+              <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="flex-grow">
+                  <time class="whitespace-nowrap mb-1 block text-sm text-base-content/60">
+                    {story.data.date.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </time>
+                  
+                  <h3 class="text-xl font-bold group-hover:text-primary transition-colors">
+                    {story.data.title}
+                  </h3>
+                </div>
 
-            <div class="ml-auto hidden md:block">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content/30 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </div>
-        </a>
+                <div class="ml-auto hidden md:block" aria-hidden="true">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content/30 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </article>
+        </li>
       ))}
-    </div>
+    </ul>
     </section>
   </PageContainer>
 </Base>
