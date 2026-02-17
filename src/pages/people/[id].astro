@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import Base from '@layouts/Base.astro';
+import PageContainer from '@components/PageContainer.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  return people.map(person => ({
+    params: { id: person.data.id },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const people = await getCollection('people');
+
+function getPersonInfo(id) {
+  const foundPerson = people.find(p => p.data.id === id);
+  return foundPerson ? { name: foundPerson.data.fullname, found: true } : { name: id, found: false };
+}
+
+---
+
+<Base title={`${person.data.fullname} | ADMT Lab`}>
+  <PageContainer width="narrow">
+    <header class="mb-12 flex flex-col md:flex-row gap-8 items-start">
+      <div class="avatar flex-shrink-0">
+        <div class="w-48 h-48 rounded-full ring ring-primary ring-offset-4 ring-offset-base-100">
+          <Image src={person.data.image} alt={person.data.fullname} class="object-cover" />
+        </div>
+      </div>
+      
+      <div class="flex-1 pt-2">
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">{person.data.fullname}</h1>
+        {person.data.shortname && person.data.shortname !== person.data.fullname && (
+          <p class="text-xl text-base-content/80 mb-2">({person.data.shortname})</p>
+        )}
+        {person.data.department && (
+          <p class="text-xl font-medium text-primary">{person.data.department}</p>
+        )}
+      </div>
+    </header>
+
+    {person.data.biography && (
+      <section class="mb-12">
+        <SectionTitle title="Biography" variant="primary" />
+        <div class="prose prose-lg max-w-none prose-a:link prose-a:link-primary">
+          <div set:html={marked.parse(person.data.biography)} />
+        </div>
+      </section>
+    )}
+
+    {person.data.degrees && person.data.degrees.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="Degrees" variant="primary" />
+        <div class="space-y-4">
+          {person.data.degrees.map(degree => (
+            <div class="card bg-base-100 shadow">
+              <div class="card-body py-4">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-primary">
+                    {degree.level.toUpperCase()}
+                  </span>
+                  <span class="text-sm text-base-content/70">
+                    {degree.month}/{degree.year}
+                  </span>
+                </div>
+                
+                {degree.title && (
+                  <h3 class="font-semibold text-lg">{degree.title}</h3>
+                )}
+                
+                {degree.advisors && degree.advisors.length > 0 && (
+                  <p class="text-sm text-base-content/70">
+                    <span class="font-medium">Advisor{degree.advisors.length > 1 ? 's' : ''}: </span>
+                    {degree.advisors.map((advisorId, index) => {
+                      const advisorInfo = getPersonInfo(advisorId);
+                      return (
+                        <span>
+                          {advisorInfo.found ? (
+                            <a href={`/people/${advisorId}`} class="link link-primary">{advisorInfo.name}</a>
+                          ) : (
+                            advisorInfo.name
+                          )}
+                          {index < degree.advisors.length - 1 ? ', ' : ''}
+                        </span>
+                      );
+                    })}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+  </PageContainer>
+</Base>

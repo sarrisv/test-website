@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '@layouts/Base.astro';
+import PageHeader from '@components/PageHeader.astro';
+import PageContainer from '@components/PageContainer.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+
+const allNews = await getCollection('news');
+const sortedNews = allNews.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const newsByYear = sortedNews.reduce((acc, post) => {
+  const year = post.data.date.getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(post);
+  return acc;
+}, {} as Record<number, typeof allNews>);
+const years = Object.keys(newsByYear).sort((a, b) => Number(b) - Number(a));
+---
+
+<Base title="News | ADMT Lab">
+  <PageContainer width="narrow">
+    <PageHeader 
+      title="News" 
+      subtitle="The latest updates from the Advanced Data Management Technologies Laboratory" 
+    />
+
+    <div class="space-y-12">
+      {years.map((year) => (
+        <section>
+          <div class="mb-6">
+             <SectionTitle title={year.toString()} variant="primary" />
+          </div>
+          
+          <div class="flex flex-col gap-6">
+            {newsByYear[Number(year)].map((post) => (
+              <a 
+                href={`/news/${post.id}`} 
+                class="card md:card-side bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 border border-base-200 overflow-hidden group"
+              >
+                <figure class="md:w-64 shrink-0 h-48 md:h-auto relative">
+                  <Image 
+                    src={post.data.image} 
+                    alt={post.data.title}
+                    width={400} 
+                    height={400}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </figure>
+                <div class="card-body">
+                  <span class="text-sm font-semibold text-primary/80">
+                    {post.data.date.toLocaleDateString('en-US', { 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </span>
+                  <h3 class="card-title text-xl font-bold group-hover:text-primary transition-colors">
+                    {post.data.title}
+                  </h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    {allNews.length === 0 && (
+      <div class="text-center py-20 bg-base-200 rounded-3xl border-2 border-dashed border-base-300">
+        <p class="text-xl text-base-content/40 font-medium">No news stories found.</p>
+      </div>
+    )}
+
+  </PageContainer>
+</Base>

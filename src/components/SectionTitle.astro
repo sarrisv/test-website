@@ -1,0 +1,37 @@
+---
+export interface Props {
+  title: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'neutral';
+  size?: 'normal' | 'large';
+  spacing?: 'normal' | 'tight' | 'loose';
+}
+
+const { 
+  title, 
+  variant = 'primary',
+  size = 'normal',
+  spacing = 'normal'
+} = Astro.props;
+
+const borderClass = variant === 'primary' 
+  ? 'border-primary'
+  : variant === 'secondary'
+  ? 'border-secondary'
+  : variant === 'accent'
+  ? 'border-accent'
+  : 'border-base-300';
+
+const titleSize = size === 'large' 
+  ? 'text-3xl' 
+  : 'text-2xl';
+
+const spacingClass = spacing === 'tight' 
+  ? 'mb-4'
+  : spacing === 'loose'
+  ? 'mb-8'
+  : 'mb-6';
+---
+
+<h2 class={`${titleSize} font-bold ${spacingClass} border-b-2 ${borderClass} pb-2`}>
+  {title}
+</h2>

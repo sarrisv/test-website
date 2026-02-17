@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@layouts/Base.astro";
+import PersonCard from "@components/PersonCard.astro";
+import PageContainer from "@components/PageContainer.astro";
+import PageHeader from "@components/PageHeader.astro";
+import SectionTitle from "@components/SectionTitle.astro";
+import CardGrid from "@components/CardGrid.astro";
+
+const people = await getCollection("people");
+const alumni = people.filter((person) => person.data.roles?.includes("alumni"));
+
+function getMostRecentDegree(person) {
+  if (!person.data.degrees || person.data.degrees.length === 0) return null;
+  const sortedDegrees = [...person.data.degrees].sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return b.month - a.month;
+  });
+
+  return sortedDegrees[0];
+}
+
+const phdAlumni = alumni.filter((person) => {
+  const recentDegree = getMostRecentDegree(person);
+  return recentDegree?.level === "phd";
+});
+const msAlumni = alumni.filter((person) => {
+  const recentDegree = getMostRecentDegree(person);
+  return recentDegree?.level === "ms";
+});
+const bsAlumni = alumni.filter((person) => {
+  const recentDegree = getMostRecentDegree(person);
+  return recentDegree?.level === "bs";
+});
+---
+
+<Base title="Alumni | ADMT Lab">
+  <PageContainer>
+    <PageHeader title="Alumni" subtitle="Former members of the ADMT Lab" />
+
+    {phdAlumni.length > 0 && (
+      <section class="mb-10">
+        <SectionTitle title="PhD Alumni" variant="primary" />
+        <CardGrid columns={3}>
+          {phdAlumni.map((person) => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {msAlumni.length > 0 && (
+      <section class="mb-10">
+        <SectionTitle title="MS Alumni" variant="primary" />
+        <CardGrid columns={3}>
+          {msAlumni.map((person) => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {bsAlumni.length > 0 && (
+      <section class="mb-10">
+        <SectionTitle title="BS Alumni" variant="primary" />
+        <CardGrid columns={3}>
+          {bsAlumni.map((person) => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {alumni.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-lg text-base-content/70">No alumni found.</p>
+      </div>
+    )}
+  </PageContainer>
+</Base>

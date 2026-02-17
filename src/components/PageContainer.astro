@@ -1,0 +1,27 @@
+---
+export interface Props {
+  width?: 'narrow' | 'normal' | 'wide' | 'full';
+  padding?: boolean;
+}
+
+const { 
+  width = 'normal',
+  padding = true
+} = Astro.props;
+
+const widthClass = width === 'narrow' 
+  ? 'max-w-4xl'
+  : width === 'wide'
+  ? 'max-w-7xl'
+  : width === 'full'
+  ? 'max-w-none'
+  : 'max-w-6xl'; // normal
+
+const paddingClass = padding ? 'px-4' : '';
+
+const containerClass = `${widthClass} mx-auto ${paddingClass}`;
+---
+
+<div class={containerClass}>
+  <slot />
+</div>

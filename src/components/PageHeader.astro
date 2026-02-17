@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  size?: 'normal' | 'large';
+  spacing?: 'normal' | 'tight' | 'loose';
+}
+
+const { 
+  title, 
+  subtitle, 
+  size = 'normal',
+  spacing = 'normal'
+} = Astro.props;
+
+const titleClass = size === 'large' 
+  ? 'text-4xl md:text-5xl font-black'
+  : 'text-4xl font-bold';
+
+const spacingClass = spacing === 'tight' 
+  ? 'mb-8'
+  : spacing === 'loose'
+  ? 'mb-16' 
+  : 'mb-12';
+---
+
+<header class={spacingClass}>
+  <h1 class={`${titleClass} mb-4`}>{title}</h1>
+  {subtitle && (
+    <p class="text-xl text-base-content/80">{subtitle}</p>
+  )}
+</header>

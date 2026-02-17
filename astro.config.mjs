@@ -1,5 +1,15 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // site: "https://db.cs.pitt.edu",
+  integrations: [
+    sitemap({
+      filter: (page) => !page.endsWith('.pdf') && !page.includes('404'),
+    }),
+  ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});

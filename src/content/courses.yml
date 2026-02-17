@@ -1,0 +1,55 @@
+- id: "CS1555/2055"
+  title: "Database Management Systems"
+  status: "current"
+  instructorIds: ["nicholas-farnan"]
+  previousInstructorIds: ["panos-chrysanthis", "brian-nixon"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-1555"
+
+- id: "CS1656/2056"
+  title: "Introduction to Data Science"
+  status: "current"
+  instructorIds: ["alexandros-labrinidis"]
+  previousInstructorIds: []
+  url: "https://courses.sci.pitt.edu/courses/view/CS-1656"
+
+- id: "CS2550"
+  title: "Principles of Database Systems"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["panos-chrysanthis"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-2550"
+
+- id: "CS3550"
+  title: "Advanced Topics in Management of Data"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["panos-chrysanthis", "alexandros-labrinidis"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-3550"
+
+- id: "CS3551"
+  title: "Advanced Topics in Distributed Information Systems"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["alexandros-labrinidis"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-3551"
+
+- id: "CS1645/2045"
+  title: "Introduction to High Performance Computing"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["constantinos-costa"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-1645"
+
+- id: "CS0155"
+  title: "Data Witchcraft"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["alexandros-labrinidis"]
+  url: "https://courses.sci.pitt.edu/courses/view/CS-0155"
+
+- id: "CS2555"
+  title: "Transaction-Oriented Computing"
+  status: "previous"
+  instructorIds: []
+  previousInstructorIds: ["panos-chrysanthis"]
+  url: "https://panos.cs.pitt.edu/"

@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+const { person } = Astro.props;
+---
+
+<div class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
+  <div class="card-body p-6">
+    <div class="flex items-center gap-5">
+      <div class="avatar flex-shrink-0">
+        <div class="w-24 h-24 rounded-full ring ring-primary ring-offset-4">
+          <Image 
+            src={person.data.image} 
+            alt={person.data.fullname} 
+            class="object-cover"
+            width={96}
+            height={96}
+          />
+        </div>
+      </div>
+      
+      <div class="flex-1 min-w-0">
+        <h3 class="font-bold text-xl">
+          <a href={`/people/${person.data.id}`} class="link link-hover">{person.data.fullname}</a>
+        </h3>
+        
+        {person.data.department && (
+          <p class="text-primary font-medium text-base mb-2">{person.data.department}</p>
+        )}
+      </div>
+    </div>
+  </div>
+</div>

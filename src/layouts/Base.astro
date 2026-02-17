@@ -1,0 +1,29 @@
+---
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css'; // Ensure Tailwind is imported
+
+const { title = "ADMT Lab | University of Pittsburgh" } = Astro.props;
+---
+
+<html lang="en" data-theme="pitt"> <!-- You can change the DaisyUI theme here -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col bg-base-200/30">
+    <Navbar />
+    
+    <main class="flex-grow container mx-auto px-4 py-8 md:px-8">
+      <slot />
+    </main>
+
+    <footer class="footer footer-center p-10 bg-base-100 text-base-content border-t border-base-300">
+      <aside>
+        <p>Copyright © {new Date().getFullYear()} - Advanced Data Management Technologies Laboratory</p>
+      </aside>
+    </footer>
+  </body>
+</html>

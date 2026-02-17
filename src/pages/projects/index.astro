@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import CardGrid from '@components/CardGrid.astro';
+
+const projects = await getCollection('projects');
+---
+
+<Base title="Projects | ADMT Lab">
+  <PageContainer>
+    <PageHeader 
+      title="Research Projects" 
+      subtitle="Exploring the boundaries of data management, stream processing, and interactive visualization" 
+    />
+
+    <CardGrid columns={2}>
+      {projects.map((project) => (
+        <div class="card bg-base-100 shadow-xl border border-base-200 hover:border-primary/30 transition-all group">
+          <div class="card-body">
+            <h2 class="card-title text-2xl group-hover:text-primary transition-colors">
+              {project.data.shortTitle || project.data.title}
+            </h2>
+            <p class="text-base-content/70 my-2">{project.data.shortDesc}</p>
+            
+            <div class="card-actions justify-end mt-4">
+              {project.data.link && (
+                <a href={`/projects/${project.data.id}`} class="btn btn-primary btn-sm">
+                  Learn More
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </CardGrid>
+
+    {projects.length === 0 && (
+      <div class="text-center py-20 bg-base-200 rounded-3xl border-2 border-dashed border-base-300">
+        <p class="text-xl text-base-content/40 font-medium">No news stories found.</p>
+      </div>
+    )}
+  </PageContainer>
+</Base>

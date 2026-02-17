@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import PersonCard from '@components/PersonCard.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import CardGrid from '@components/CardGrid.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+
+const people = await getCollection('people');
+const faculty = people.filter(person => 
+  person.data.roles?.includes('faculty') || 
+  person.data.roles?.includes('collaborator') || 
+  person.data.roles?.includes('affiliated') || 
+  person.data.roles?.includes('former')
+);
+const labFaculty = faculty.filter(person => person.data.roles?.includes('faculty'));
+const collaboratorFaculty = faculty.filter(person => person.data.roles?.includes('collaborator'));
+const affiliatedFaculty = faculty.filter(person => person.data.roles?.includes('affiliated'));
+const formerFaculty = faculty.filter(person => person.data.roles?.includes('former'));
+
+---
+
+<Base title="Faculty | ADMT Lab">
+  <PageContainer>
+    <PageHeader 
+      title="Faculty" 
+      subtitle="Faculty members of the ADMT Lab" 
+    />
+
+    {labFaculty.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="ADMT Faculty" variant="primary" />
+        <CardGrid columns={3}>
+          {labFaculty.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {collaboratorFaculty.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="Faculty Collaborators" variant="primary" />
+        <CardGrid columns={3}>
+          {collaboratorFaculty.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {affiliatedFaculty.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="Affiliated Scholars" variant="primary" />
+        <CardGrid columns={3}>
+          {affiliatedFaculty.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {formerFaculty.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="Former Affiliated Faculty & Scholars" variant="primary" />
+        <CardGrid columns={3}>
+          {formerFaculty.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {faculty.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-lg text-base-content/70">No faculty found.</p>
+      </div>
+    )}
+  </PageContainer>
+</Base>

@@ -1,0 +1,68 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  course: CollectionEntry<'courses'>;
+  people: CollectionEntry<'people'>[];
+  isCurrent: boolean;
+}
+
+const { course, people, isCurrent } = Astro.props;
+
+function getPersonInfo(id: string) {
+  const person = people.find(p => p.data.id === id);
+  return person ? { name: person.data.fullname, found: true } : { name: id, found: false };
+}
+---
+
+<div class="card bg-base-100 shadow-lg">
+  <div class="card-body">
+    <h3 class="card-title text-lg">
+      {course.data.url ? (
+        <a href={course.data.url} target="_blank" rel="noopener noreferrer" class="link link-primary">
+          {course.data.id}: {course.data.title}
+        </a>
+      ) : (
+        `${course.data.id}: ${course.data.title}`
+      )}
+    </h3>
+
+    {isCurrent && course.data.instructorIds && course.data.instructorIds.length > 0 && (
+      <div class="mb-2">
+        <span class="font-semibold">Current Instructor(s): </span>
+        {course.data.instructorIds.map((instructorId, index) => {
+          const personInfo = getPersonInfo(instructorId);
+          return (
+            <span>
+              {personInfo.found ? (
+                <a href={`/people/${instructorId}`} class="link link-primary">{personInfo.name}</a>
+              ) : (
+                personInfo.name
+              )}
+              {index < course.data.instructorIds.length - 1 ? ', ' : ''}
+            </span>
+          );
+        })}
+      </div>
+    )}
+
+    {course.data.previousInstructorIds && course.data.previousInstructorIds.length > 0 && (
+      <div class="text-sm text-base-content/70">
+        <span class="font-semibold">{isCurrent ? 'Previously taught by: ' : 'Taught by: '}</span>
+        {course.data.previousInstructorIds.map((instructorId, index) => {
+          const personInfo = getPersonInfo(instructorId);
+          return (
+            <span>
+              {personInfo.found ? (
+                <a href={`/people/${instructorId}`} class="link link-primary">{personInfo.name}</a>
+              ) : (
+                personInfo.name
+              )}
+              {index < course.data.previousInstructorIds.length - 1 ? ', ' : ''}
+            </span>
+          );
+        })}
+      </div>
+    )}
+  </div>
+</div>

@@ -9,6 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@astrojs/sitemap": "^3.7.0",
+    "@citation-js/core": "^0.7.21",
+    "@citation-js/plugin-bibtex": "^0.7.21",
+    "@citation-js/plugin-csl": "^0.7.22",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "daisyui": "^5.5.18",
+    "marked": "^17.0.2",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
   }
 }

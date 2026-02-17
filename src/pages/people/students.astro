@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@layouts/Base.astro';
+import PersonCard from '@components/PersonCard.astro';
+import PageContainer from '@components/PageContainer.astro';
+import PageHeader from '@components/PageHeader.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import CardGrid from '@components/CardGrid.astro';
+
+const people = await getCollection('people');
+const students = people.filter(person => 
+  person.data.roles?.includes('phd') || person.data.roles?.includes('ms') || person.data.roles?.includes('bs')
+);
+const phdStudents = students.filter(person => person.data.roles?.includes('phd'));
+const msStudents = students.filter(person => person.data.roles?.includes('ms'));
+const bsStudents = students.filter(person => person.data.roles?.includes('bs'));
+---
+
+<Base title="Students | ADMT Lab">
+  <PageContainer>
+    <PageHeader 
+      title="Students" 
+      subtitle="Current students in the ADMT Lab" 
+    />
+
+    {phdStudents.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="PhD Students" variant="primary" />
+        <CardGrid columns={3}>
+          {phdStudents.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {msStudents.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="MS Students" variant="primary" />
+        <CardGrid columns={3}>
+          {msStudents.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {bsStudents.length > 0 && (
+      <section class="mb-12">
+        <SectionTitle title="BS Students" variant="primary" />
+        <CardGrid columns={3}>
+          {bsStudents.map(person => (
+            <PersonCard person={person} />
+          ))}
+        </CardGrid>
+      </section>
+    )}
+
+    {students.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-lg text-base-content/70">No students found.</p>
+      </div>
+    )}
+  </PageContainer>
+</Base>

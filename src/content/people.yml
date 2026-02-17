@@ -1,0 +1,1489 @@
+# Faculty Members
+- id: "panos-chrysanthis"
+  fullname: "Panos K. Chrysanthis"
+  shortname: "Panos Chrysanthis"
+  roles: ["faculty"]
+  department: "Lab Founder and co-Director"
+  image: "../assets/people/panos.jpg"
+  biography: |
+    Panos Kypros Chrysanthis is a Professor of Computer Science and a founder and director of the Advanced Data Management Technologies Laboratory at the University of Pittsburgh. He is also an adjunct Professor at Carnegie-Mellon University and at the University of Cyprus. He received his BS degree (Physics with concentration in Computer Science, 1982) from the University of Athens, Greece. He earned his MS and PhD degrees (Computer and Information Sciences, 1986 and 1991) from the University of Massachusetts at Amherst. 
+
+    His research interests lie within the areas of data management (Big Data, Databases, Data Streams & Sensor networks), distributed & mobile computing, workflow management, operating systems and real-time systems. In 1995, he was a recipient of the U.S. National Science Foundation CAREER Award for his investigation on the management of data for mobile and wireless computing. His editorial service includes VLDB J (2001 - 2007), IEEE TKDE (2012 - 2017) and DAPD (2011 - present). Chrysanthis is an ACM Distinguished Scientist and a Senior Member of IEEE. He was honored with seven teaching awards and in 2015, he received the University of Pittsburgh's Provost Award for Excellence in Mentoring (doctoral students).
+
+    More information about Dr. Chrysanthis can be found [here](https://panos.cs.pitt.edu).
+
+- id: "alexandros-labrinidis"
+  fullname: "Alexandros Labrinidis"
+  shortname: "Alexandros Labrinidis"
+  roles: ["faculty"]
+  department: "Lab co-Director"
+  image: "../assets/people/alex_labrinidis.jpg"
+  biography: |
+    Dr. Alexandros Labrinidis received his Ph.D degree in Computer Science from the University of Maryland, College Park in 2002. He is currently a professor of Computer Science at the University of Pittsburgh and co-director of the Advanced Data Management Technologies Laboratory (ADMT Lab). He also previously served as the Chair at the Department of Computer Science and is an adjunct professor at Carnegie Mellon University (CS Dept).
+
+    Dr. Labrinidis' research focuses on user-centric data management for scalable network-centric applications, including web-databases, data stream management systems, sensor networks, and scientific data management (with an emphasis on big data). He has published over 70 papers at peer-reviewed journals, conferences, and workshops; he is the recipient of an NSF CAREER award in 2008. Dr. Labrinidis served as the Secretary/Treasurer for ACM SIGMOD and as the Editor of SIGMOD Record. He is currently on the editorial board of the Very Large Databases Journal and of the Parallel and Distributed Databases Journal. He has also served on numerous program committees of international conferences/workshops; in 2014, he was the PC Track-Chair for Streams and Sensor Networks for the ICDE conference.
+
+    More information about Dr. Labrinidis can be found [here](https://labrinidis.cs.pitt.edu/).
+
+- id: "nadine-von-frankenberg"
+  fullname: "Nadine von Frankenberg"
+  shortname: "Nadine von Frankenberg"
+  roles: ["collaborator"]
+  department: "Computer Science"
+  image: "../assets/people/Nadine-von-frankenberg.jpg"
+  biography: |
+    Nadine's specific research interests lie within ubiquitous computing, smart buildings, IEQ, human-in-the-loop control, digital health, and educational research. Nadine has published many representative publications within these areas and a full list can be found [here](https://www.cs.pitt.edu/people/full-time-faculty/nadine-von-frankenberg).
+
+- id: "michael-colaresi"
+  fullname: "Michael Colaresi"
+  shortname: "Michael Colaresi"
+  roles: ["collaborator"]
+  department: "Political Science"
+  image: "../assets/people/michael-colaresi.webp"
+  biography: |
+    Michael Colaresi is the William S. Dietrich II Chair of Political Science. His work leverages the accelerating availability of computational tools, including machine learning and Bayesian approaches, along with unstructured information, such as from digitized text, to build and improve models of national security secrecy and oversight, international and intrastate violence, and changes in human rights over time. He also develops computational and visual tools that enable domain specialists to work alongside computer scientists to improve specific applications.
+
+    More information about Dr. Colaresi can be found [here](https://www.polisci.pitt.edu/people/michael-colaresi).
+
+- id: "konstantinos-pelechrinis"
+  fullname: "Konstantinos Pelechrinis"
+  shortname: "Konstantinos Pelechrinis"
+  roles: ["collaborator"]
+  department: "Informatics & Network Sciences"
+  image: "../assets/people/konstantios_pelechrinis.jpg"
+  biography: |
+    Konstantinos Pelechrinis is an associate professor in the Department of Informatics and Networked Systems at the University of Pittsburgh. He holds a PhD degree in Computer Science from the University of California, Riverside. 
+
+    His research interests span network and data science with applications in urban sciences and sports analytics. He is a recipient of the Army Research Office Young Investigator Award.
+
+    More information about Dr. Pelechrinis can be found [here](https://www.dins.pitt.edu/people/konstantinos-pelechrinis).
+
+- id: "vladimir-zadorozhny"
+  fullname: "Vladimir Zadorozhny"
+  shortname: "Vladimir Zadorozhny"
+  roles: ["collaborator"]
+  department: "Informatics & Network Sciences"
+  image: "../assets/people/vladimir_zadorozhny.jpg"
+  biography: |
+    Vladimir Zadorozhny is a Professor in the Department of Informatics and Networked Systems, a Core Faculty Member at the University of Pittsburgh's Biomedical Informatics Training Program and an Adjunct Professor in the Faculty of Engineering and Science of the University of Agder.
+
+    He received his Ph.D. in 1993 from the Institute for Problems of Informatics, Russian Academy of Sciences in Moscow. Before coming to the USA he was a Principal Research Scientist in the Institute of System Programming, Russian Academy of Sciences. Since 1998 he worked as a Research Associate in the University of Maryland's Institute for Advanced Computer Studies at College Park. He joined the University of Pittsburgh in 2001. 
+
+    His research interests include information integration, data fusion, complex adaptive systems and crowdsourcing, query optimization in resource-constrained distributed environments, sensor data management, and scalable architectures for wide-area environments with heterogeneous information servers. His research has been supported by NSF, EU and Norwegian Research Council. 
+
+    More information about Dr. Zadorozhny can be found [here](https://sites.pitt.edu/~viz/).
+
+- id: "alexander-jones"
+  fullname: "Alexander K. Jones"
+  shortname: "Alex Jones"
+  roles: ["collaborator"]
+  department: "Computer Engineering"
+  image: "../assets/people/alexjones.jpg"
+  biography: |
+    Alex K. Jones is a Full Professor of Electrical and Computer Engineering at the University of Pittsburgh. He is currently on leave from Pitt serving as the Deputyh Division Director of the Electrical, Communications and Cyber Systems (ECCS) Division at the US NSF. 
+
+    More information about Dr. Jones can be found [here](https://www.alex-k-jones.org/).
+
+- id: "kirk-pruhs"
+  fullname: "Kirk Pruhs"
+  shortname: "Kirk Pruhs"
+  roles: ["collaborator"]
+  department: "Computer Science"
+  image: "../assets/people/kirk_pruhs.jpg"
+  biography: |
+    Kirk Pruhs is a Professor in the Department of Computer Science at the University of Pittsburgh. Professor Pruhs received a BS degree (Mathematics and Computer Science, 1984) from Iowa State University and a PhD degree (Computer Science, 1989) from the University of Wisconsin-Madison. 
+    
+    Professor Pruhs' research interests are in algorithmic problems related to relational learning, energy as a computational resource, resource management, scheduling, online optimization, online scheduling, and fair allocation. He is also on the editorial boards of Journal of Scheduling, INFORMS Journal of Computing, and ACM Transactions on Algorithms. 
+
+    More information about Professor Pruhs can be found [here](https://people.cs.pitt.edu/~kirk/).
+
+- id: "adam-lee"
+  fullname: "Adam J. Lee"
+  shortname: "Adam Lee"
+  roles: ["collaborator"]
+  department: "Computer Science"
+  image: "../assets/people/adam_lee.jpg"
+  biography: |
+    Adam Lee is a Professor in the Department of Computer Science and currently serving as the Vice Provost for Undergraduate Studies at the University of Pittsburgh. Dr. Lee's research interests lie at the intersection of the computer security, privacy, and distributed systems fields. He is particularly interested in the design and analysis of systems that can be used to facilitate secure interactions across multiple security domains while still preserving each individual's privacy and autonomy. His work also investigates individuals' perceptions of privacy in the context of IoT and sensor-based systems, and the design of sensing systems that balance functionality and privacy needs of users. His research has been supported by the NSF and DARPA, and he is an NSF CAREER award recipient. 
+
+    More information about Dr. Lee can be found [here](https://www.provost.pitt.edu/people/adam-lee).
+
+- id: "takis-benos"
+  fullname: "Panayiotis (Takis) Benos"
+  shortname: "Takis Benos"
+  roles: ["affiliated"]
+  department: "Computational & Systems Biology"
+  image: "../assets/people/panayiotis_benos.jpg"
+  biography: |
+    Takis Benos is a William Bushnell Presidential Chaired Professor in the Department of Epidemiology at the University of Florida where he leads a lab focused on tackling important questions in systems medicine by developing and using novel machine learning algorithms. 
+
+    More information about Dr. Benos can be found [here](https://phhp.ufl.edu/profile/benos-takis/).
+
+- id: "christos-faloutsos"
+  fullname: "Christos Faloutsos"
+  shortname: "Christos Faloutsos"
+  roles: ["affiliated"]
+  department: "Carnegie Mellon University, USA"
+  image: "../assets/people/christos_faloutos.jpg"
+  biography: |
+    Christos Faloutsos is a Professor at Carnegie Mellon University and an Amazon Scholar. He is the recipient of the Fredkin Professorship in Artificial Intelligence (2020); he has received the Presidential Young Investigator Award by the National Science Foundation (1989), the Research Contributions Award in ICDM 2006, the SIGKDD Innovations Award (2010), the PAKDD Distinguished Contributions Award (2018), 29 "best paper" awards (including 8 "test of time" awards), and four teaching awards. His research interests include large-scale data mining with emphasis on graphs and time sequences; anomaly detection, tensors, and fractals.
+
+    More information about Dr. Faloutsos can be found [here](https://www.csd.cmu.edu/people/faculty/christos-faloutsos).
+
+- id: "demetris-zeinalipour"
+  fullname: "Demetris Zeinalipour"
+  shortname: "Demetris Zeinalipour"
+  roles: ["affiliated"]
+  department: "University of Cyprus, Cyprus"
+  image: "../assets/people/demetrios_zeinalipour.jpg"
+  biography: |
+    Demetris Zeinalipour is a Professor of Computer Science at the University of Cyprus, where he founded and directs the Data Management Systems Laboratory (DMSL). He holds a Ph.D. and M.Sc. in Computer Science and Engineering from the University of California - Riverside, CA, USA. In addition to his roles at the University of Cyprus, he has held short-term research visits at Akamai Technologies, Cambridge, MA, USA, the University of Athens, Greece as a Marie-Curie Fellow and the University of Pittsburgh, PA, USA. His primary research interests include **Data Management in Computer Systems and Networks**, particularly Mobile Sensor and Spatio-Temporal Data Management; Big Data Management in Parallel and Distributed Architectures; Network, Blockchain and Telco Data Management; Crowd, Web 2.0 and Indoor Data Management; Data Privacy Management; Data Management for Sustainability; AI and Data Management.
+
+    More information about Dr. Zeinalipour can be found [here](https://www.cs.ucy.ac.cy/~dzeina/).
+
+- id: "alex-delis"
+  fullname: "Alex Delis"
+  shortname: "Alex Delis"
+  roles: ["affiliated"]
+  department: "University of Athens, Greece"
+  image: "../assets/people/alex_delis.png"
+  biography: |
+    Alex Delis is currently a Professor of Computer Systems in the Department of Informatics and Telecommunications of the University of Athens. He received his Ph.D. and M.Sc. in Computer Science from the University of Maryland in College Park, MD. He has served as a faculty member at the Queensland University of Australia and the Polytechnic Institute of New York University in Brooklyn, NY, where he previously served as an Associate Professor. His research interests included distributed systems, system architectures (client-server, multi-tier, Grid and Cloud architectures), network information systems, and software engineering.
+
+    More information about Dr. Delis can be found [here](https://www.madgik.di.uoa.gr/people/faculty/adelis).
+
+- id: "mohamed-sharaf"
+  fullname: "Mohamed Sharaf"
+  shortname: "Mohamed Sharaf"
+  roles: ["affiliated", "alumni"]
+  department: "United Arab Emirates University, UAE"
+  image: "../assets/people/sharaf.jpg"
+  biography: |
+    Mohamed Sharaf is an Associate Professor in the Department of Computer Science and Software Engineering at the United Arab Emirates University.
+
+    More information about Dr. Sharaf can be found [here](https://research.uaeu.ac.ae/en/persons/mohamed-sharaf).
+  degrees:
+    - level: "phd"
+      title: "Metrics and Algorithms for Processing Multiple Continuous Queries"
+      advisors: ["panos-chrysanthis", "alexandros-labrinidis"]
+      month: 8
+      year: 2007
+    - level: "ms"
+      title: "STOBS: Summary Tables On-Demand Broadcast Scheduler"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2003
+
+- id: "constantinos-costa"
+  fullname: "Constantinos Costa"
+  shortname: "Constantinos Costa"
+  roles: ["affiliated"]
+  department: "Rinnoco Ltd, Cyprus"
+  image: "../assets/people/constantinoscosta.jpg"
+  biography: |
+    Dr. Constantinos Costa is a co-founder and CEO of Rinnoco Ltd, a research, innovation, and education consulting startup company founded in 2021. He was a visiting assistant professor at the University of Cyprus for the Fall 2023 term. Before founding Rinnoco, he was a visiting research assistant professor at the University of Pittsburgh and a research associate in the ADMT laboratory. He has significant experience in data management (databases, spatial big data, spatio-temporal datasets, NoSQL), distributed, cloud and high-performance computing. Over the last ten years, he has developed novel software stacks and services for industrial projects in collaboration with various companies and organizations, namely, Appcampus (Finland), Cywee (Taiwan), MTN Telco (Cyprus), Geomatics (Cyprus), and Nicosia General Hospital (Cyprus). He has also contributed extensively to the open-source project Anyplace, for indoor navigation and localization, which led to new collaborations with the industry.
+
+    More information about Dr. Costa can be found [here](https://costadb.com/).
+
+- id: "walter-schneider"
+  fullname: "Walter Schneider"
+  shortname: "Walter Schneider"
+  roles: ["former"]
+  department: "Psychology"
+  image: "../assets/people/walter.jpg"
+  biography: |
+    Walter Schneider is a Professor in the Department of Psychology at the University of Pittsburgh, an Executive Committee Member at the Center for the Neural Basis of Cognition and a Senior Scientist in the Learning Research & Development Center at the University of Pittsburgh. His research interests include cognitive neuroscience, cognitive control, semantic representation, attention and automaticity, skill acquisition, connectionist/hybrid modeling, brain imaging and brain activity interpretation.
+
+    More information about Dr. Schneider can be found [here](https://www.lrdc.pitt.edu/people/researcher-detail.cshtml?id=42).
+
+- id: "shimin-chen"
+  fullname: "Shimin Chen"
+  shortname: "Shimin Chen"
+  roles: ["former"]
+  department: "Intel Labs Pittsburgh"
+  image: "../assets/people/shimin_chen.jpg"
+  biography: |
+    More information about Dr. Chen can be found [here](https://www.shimin-chen.com/).
+
+- id: "qinglan-li"
+  fullname: "Qinglan Li"
+  shortname: "Qinglan Li"
+  roles: ["former", "alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  biography: |
+    Postdoc, Software Engineer on the AstroShelf project from 2013 to 2014.
+  degrees:
+    - level: "phd"
+      title: "A user-driven annotation framework for scientific data"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 6
+      year: 2013
+
+- id: "nicholas-farnan"
+  fullname: "Nicholas Farnan"
+  shortname: "Nick Farnan"
+  roles: ["former"]
+  department: "Computer Science"
+  image: "../assets/people/farnan.jpg"
+  biography: |
+    While completing his PhD, which focused on Data Security and Privacy, under the supervision of Adam Lee, Nick Farnan briefly worked with Panos K. Chrysanthis. After completing his PhD, Dr. Farnan has been teaching courses at the University of Pittsburgh as a Teaching Associate Professor.
+
+    More information about Dr. Farnan can be found [here](https://people.cs.pitt.edu/~nlf4/).
+
+- id: "anuradha-kulkarni"
+  fullname: "Anuradha Kulkarni"
+  shortname: "Anuradha Kulkarni"
+  roles: ["former"]
+  department: "Data Science"
+  image: "../assets/people/user-profile.jpg"
+  biography: |
+    Formerly collaborated with the ADMT Lab during the Spring 2017 term.
+
+- id: "liz-marai"
+  fullname: "Liz Marai"
+  shortname: "Liz Marai"
+  roles: ["former"]
+  department: "University of Illinois, Chicago"
+  image: "../assets/people/liz_marai.jpg"
+  biography: |
+    Prof. Liz Marai was a Co-PI on the AstroShelf Project as the Data Visualization expert.
+
+    More information about Dr. Marai can be found [here](https://www.evl.uic.edu/marai/home/index.html).
+
+- id: "ahmed-amer"
+  fullname: "Ahmed Amer"
+  shortname: "Ahmed Amer"
+  roles: ["former"]
+  department: "Santa Clara University"
+  image: "../assets/people/amer.jpg"
+  biography: |
+    Ahmed Amer is an associate professor of Computer Science and Engineering at Santa Clara University. His research primarily focuses on systems topics, particularly data storage systems, operating systems, and distributed systems.
+
+    More information about Dr. Amer can be found [here](https://www.scu.edu/engineering/faculty/amer-ahmed/).
+
+- id: "bruce-childers"
+  fullname: "Bruce R. Childers"
+  shortname: "Bruce Childers"
+  roles: ["former"]
+  department: "Computer Science"
+  image: "../assets/people/bruce_childers.jpg"
+  biography: |
+    Bruce Childers is currently serving as the Dean of the School of Computing and Information (SCI) at the University of Pittsburgh. He is a Professor of Computer Science. Childers' recent research focuses on novel technologies and cultural change to advance transparency, reuse and reproducibility of data science for accelerated discovery and trustworthy insight. 
+
+    More information about Dr. Childers can be found [here](https://people.cs.pitt.edu/~childers/).
+
+- id: "george-samaras"
+  fullname: "George Samaras"
+  shortname: "George Samaras"
+  roles: ["former"]
+  department: "University of Cyprus"
+  image: "../assets/people/george_samaras.jpg"
+  biography: |
+    George Samaras was a Professor in the Department of Computer Science at the University of Cyprus. His research interests included mobile computing, relational and object-oriented databases, object-oriented programming, and commit protocols for distributed transaction processing.
+
+    More information about Dr. Samaras can be found [here](https://www.cs.ucy.ac.cy/index.php/people/former-academic-staff-members-en/15-cssamara).
+
+# Current Students
+- id: "brian-nixon"
+  fullname: "Brian T. Nixon"
+  shortname: "Brian Nixon"
+  roles: ["phd"]
+  department: "Computer Science"
+  image: "../assets/people/Brian-T-Nixon.jpg"
+  interests: ["Data Decay and Storage", "Data Postdiction"]
+  biography: |
+    Brian Nixon is a PhD Candidate in the Department of Computer Science at the University of Pittsburgh where he is advised by Dr. Panos K. Chrysanthis. Brian received his B.S. in Computer Science from the University of Pittsburgh. His research currently specializes in data postdiction, data reduction and database management systems.
+
+    More information about Brian can be found [here](https://people.cs.pitt.edu/~btn10/).
+
+- id: "xiaoting-li"
+  fullname: "Xiaoting Li"
+  shortname: "Xiaoting Li"
+  roles: ["phd"]
+  department: "Computer Science"
+  image: "../assets/people/xiaoting_li.jpg"
+  interests: ["Data Mining", "Data Science", "Machine Learning"]
+  biography: |
+    Xiaoting Li is a PhD Candidate in the Department of Computer Science at the University of Pittsburgh where she is advised by Dr. Alexandros Labrinidis.
+
+    More information about Xiaoting can be found [here](https://www.cs.pitt.edu/people/phd-students/xiaoting-li).
+
+- id: "evangelos-karageorgos"
+  fullname: "Evangelos Karageorgos"
+  shortname: "Evangelos Karageorgos"
+  roles: ["phd"]
+  department: "Computer Science"
+  image: "../assets/people/Evangelos-Karageorgos.jpg"
+  interests: ["Natural Language and SQL"]
+  biography: |
+    Evangelos Karageorgos is a PhD Candidate in the Department of Computer Science at the University of Pittsburgh where he is advised by Dr. Alexandros Labrinidis.
+
+- id: "vasilis-sarris"
+  fullname: "Vasilis E. Sarris"
+  shortname: "Vasilis Sarris"
+  roles: ["phd", "alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Vasilis-Sarris.jpg"
+  interests: ["Database Systems", "Graph Algorithms", "Worst-Case Optimal Join Algorithms"]
+  biography: |
+    Vasilis Sarris is a PhD Student in Computer Science at the University of Pittsburgh where he is advised by Dr. Panos K. Chrysanthis. His current research interests lie primarily in databases systems and his recent work focuses on making worst-case optimal join algorithms suitable for cloud environments.
+
+    More information about Vasilis can be found [here](https://vesarris.com/).
+  degrees:
+    - level: "ms"
+      title: "ASTRO-C: Congestion-Based Indoor-Outdoor Path Finding"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2023
+    - level: "bs"
+      title: "ASTRO-K: Finding Top-k Sufficiently Distinct Indoor-Outdoor Paths"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2022
+
+- id: "kartik-hans"
+  fullname: "Kartik Hans"
+  shortname: "Kartik Hans"
+  roles: ["ms"]
+  department: "Computer Science"
+  image: "../assets/people/kartik-hans.png"
+  interests: ["Distributed Systems", "High-Performance Parallel Computing", "Data Management", "Computer Networks"]
+  biography: |
+    Kartik Hans is a MS Student in Computer Science at the University of Pittsburgh where he is advised by Dr. Panos K. Chrysanthis. His current research interests lie primarily in Distributed Systems, High-Performance Parallel Computing, Data Management, Computer Networks.
+
+    More information about Kartik can be found [here](https://kartikhans.github.io/).
+
+# Alumni
+- id: "anushri-hatti"
+  fullname: "Anushri Hatti"
+  shortname: "Anushri Hatti"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Anushri-Hatti.jpg"
+  degrees:
+    - level: "ms"
+      title: "Explainability and Interpretability for RETSINA"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2024
+
+- id: "srushti-dhile"
+  fullname: "Srushti Dhile"
+  shortname: "Srushti Dhile"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Srushti-Dhile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Exam Version Generator"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2024
+
+- id: "connor-sweeney"
+  fullname: "Connor Sweeney"
+  shortname: "Connor Sweeney"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Connor-Sweeney.jpg"
+  degrees:
+    - level: "ms"
+      title: "GIO.G: A Generator for Indoor-Outdoor Graphs to Simulate and Analyze Urban Environments"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2024
+
+- id: "sean-linton"
+  fullname: "Sean Linton"
+  shortname: "Sean Linton"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Sean-Linton.jpg"
+  degrees:
+    - level: "ms"
+      title: "HR-VEAW Web App and GIO.G"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2024
+
+- id: "robbie-fishel"
+  fullname: "Robbie Fishel"
+  shortname: "Robbie Fishel"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Robbie-Fishel.jpg"
+  degrees:
+    - level: "ms"
+      title: "Textual Data Postdiction using Word2Vec Models"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2024
+
+- id: "trevor-petersen"
+  fullname: "Trevor Petersen"
+  shortname: "Trevor Petersen"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Trevor-Petersen.jpg"
+  degrees:
+    - level: "ms"
+      title: "Storage reduction and retrieval with decayed value encoding using Regression models"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2024
+
+- id: "zi-ding"
+  fullname: "Zi Han Ding"
+  shortname: "Zi Han Ding"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Zi-Han.jpg"
+  degrees:
+    - level: "bs"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2024
+
+- id: "maximus-hayes"
+  fullname: "Maximus Hayes"
+  shortname: "Maximus Hayes"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Maximus-Hayes.png"
+  degrees:
+    - level: "bs"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2024
+
+- id: "gregory-guazzone"
+  fullname: "Gregory Guazzone"
+  shortname: "Gregory Guazzone"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Gregory-Guazzone.jpg"
+  degrees:
+    - level: "bs"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 12
+      year: 2023
+
+- id: "rakan-alseghayer"
+  fullname: "Rakan A. Alseghayer"
+  shortname: "Rakan Alseghayer"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/rakan-alseghayer.jpg"
+  degrees:
+    - level: "phd"
+      title: "Optimizing Operators for Temporal and Spatiotemporal Data"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2023
+
+- id: "xiaozhong-zhang"
+  fullname: "Xiaozhong Zhang"
+  shortname: "Xiaozhong Zhang"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/xiaozhong-zhang.png"
+  degrees:
+    - level: "phd"
+      title: "Leveraging Interactive User Feedback for Personalized Data Visualization Recommendation"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2023
+
+- id: "xiaoyu-ge"
+  fullname: "Xiaoyu Ge"
+  shortname: "Xiaoyu Ge"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/xiaoyu_ge.png"
+  degrees:
+    - level: "phd"
+      title: "Minimizing User Effort in Large Scale Example-driven Data Exploration"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2021
+    - level: "ms"
+      title: "Preferential Diversity"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2019
+
+- id: "daniel-petrov"
+  fullname: "Daniel P. Petrov"
+  shortname: "Daniel Petrov"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "IoT-Driven Scheduling of Residential HVAC and Virtual Bus Lanes for Energy Savings"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2021
+
+- id: "nick-katsipoulakis"
+  fullname: "Nick R. Katsipoulakis"
+  shortname: "Nick Katsipoulakis"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "A Procrustean Approach to Stream Processing"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 4
+      year: 2020
+
+- id: "marian-zaki"
+  fullname: "Marian Zaki"
+  shortname: "Marian Zaki"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/marian-zaki.jpg"
+  degrees:
+    - level: "phd"
+      title: "Balancing Privacy, Precision and Performance in Distributed Systems"
+      advisors: ["adam-lee", "panos-chrysanthis"]
+      month: 12
+      year: 2019
+
+- id: "anatoli-shein"
+  fullname: "Anatoli Shein"
+  shortname: "Anatoli Shein"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/anatoli_shein.jpg"
+  degrees:
+    - level: "phd"
+      title: "Algorithms and Optimizations for Incremental Window-based Aggregations"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2019
+    - level: "ms"
+      title: "FlatFIT, Aggregate Continuous Query, Sliding-Window Processing"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2018
+
+- id: "vineet-raghu"
+  fullname: "Vineet Raghu"
+  shortname: "Vineet Raghu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/vinheet_raghu.jpg"
+  degrees:
+    - level: "phd"
+      title: "A Computational Pipeline for Graphical Modeling of Integrated Biomedical Data"
+      advisors: ["panos-chrysanthis", "takis-benos"]
+      month: 8
+      year: 2019
+
+- id: "cory-thoma"
+  fullname: "Cory Thoma"
+  shortname: "Cory Thoma"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/cory_thoma.jpg"
+  degrees:
+    - level: "phd"
+      title: "Towards Scalable, Cloud Based, Confidential Data Stream Processing"
+      advisors: ["alexandros-labrinidis", "adam-lee"]
+      month: 8
+      year: 2019
+
+- id: "angen-zheng"
+  fullname: "Angen Zheng"
+  shortname: "Angen Zheng"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/angen_zheng.jpg"
+  degrees:
+    - level: "phd"
+      title: "Architecture- and Workload-Aware Graph (Re)Partitioning"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 5
+      year: 2017
+
+- id: "thao-pham"
+  fullname: "Thao N. Pham"
+  shortname: "Thao Pham"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/thao.jpg"
+  degrees:
+    - level: "phd"
+      title: "Exploiting the Synergy between Scheduling and Loading Shredding for Continuous Queries"
+      advisors: ["panos-chrysanthis", "alexandros-labrinidis"]
+      month: 5
+      year: 2014
+
+- id: "roxana-gheorghiu"
+  fullname: "Roxana Gheorghiu"
+  shortname: "Roxana Gheorghiu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/roxana_gheorghiu.jpg"
+  degrees:
+    - level: "phd"
+      title: "Unifying Qualitative and Quantitative Database Preferences to Enhance Query Personalization"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 5
+      year: 2014
+
+- id: "lory-moakar"
+  fullname: "Lory Al Moakar"
+  shortname: "Lorgy Al Moakar"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/lory_al-moakar.jpg"
+  degrees:
+    - level: "phd"
+      title: "Class-based continuous query scheduling in data stream management systems"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 6
+      year: 2013
+
+- id: "panayiotis-neophytou"
+  fullname: "Panayiotis Neophytou"
+  shortname: "Panayiotis Neophytou"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/panayiotis_neophytou.jpg"
+  degrees:
+    - level: "phd"
+      title: "Continuous workflows: from model to enactment system"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 12
+      year: 2012
+
+- id: "shenoda-guirguis"
+  fullname: "Shenoda Guirguis"
+  shortname: "Shenoda Guirguis"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/shenoda_guirguis.jpg"
+  degrees:
+    - level: "phd"
+      title: "Scalable Processing of Multiple Aggregate Continuous Queries"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 8
+      year: 2011
+
+- id: "stavros-papastavrou"
+  fullname: "Stavros Papastavrou"
+  shortname: "Stavros Papastavrou"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "Materialization Algorithms for Dynamic Web Database Applications"
+      advisors: ["panos-chrysanthis", "george-samaras"]
+      month: 4
+      year: 2011
+
+- id: "mohamed-aly"
+  fullname: "Mohamed Aly"
+  shortname: "Mohamed Aly"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/mohamed_aly.jpg"
+  degrees:
+    - level: "phd"
+      title: "Load Balancing Hotspots in Sensor Storage Systems"
+      advisors: ["panos-chrysanthis", "kirk-pruhs"]
+      month: 4
+      year: 2009
+
+- id: "huiming-qu"
+  fullname: "Huiming Qu"
+  shortname: "Huiming Qu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "Managing Query and Update Transactions under Quality Contracts in Web-Databases"
+      advisors: ["alexandros-labrinidis"]
+      month: 12
+      year: 2007
+
+- id: "jonathan-beaver"
+  fullname: "Jonathan Beaver"
+  shortname: "Jonathan Beaver"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/johnathan_beaver.jpg"
+  degrees:
+    - level: "phd"
+      title: "Improving the Multi-Channel Hybrid Data Dissemination System"
+      advisors: ["panos-chrysanthis", "kirk-pruhs"]
+      month: 4
+      year: 2006
+
+- id: "susan-lauzac"
+  fullname: "Susan Lauzac"
+  shortname: "Susan Lauzac"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/susan-lauzac.jpg"
+  degrees:
+    - level: "phd"
+      title: "The View Holder Approach: Utilizing Customized Materialized Views to Create Database Services Suitable for Mobile Database Applications"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2001
+    - level: "ms"
+      title: "Changing Query by Icons to Improve Query Processing for Mobile Users"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1995
+
+- id: "yousef-al-houmaily"
+  fullname: "Yousef J. Al-Houmaily"
+  shortname: "Yousef Al-Houmaily"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "Commit Processing in Distributed, Heterogeneous and Multidatabase Systems"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1997
+
+- id: "chien-tsai-liu"
+  fullname: "Chien-Tsai Liu"
+  shortname: "Chien-Tsai Liu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "phd"
+      title: "Database Schema Evolution through the Specification and Maintenance of Changes on Entities and Relationships"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 1994
+
+- id: "sai-konduru"
+  fullname: "Sai Chand Konduru"
+  shortname: "Sai Chand Konduru"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Inclusive Interface for CAPRIO Application"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2022
+
+- id: "zack-hable"
+  fullname: "Zack Hable"
+  shortname: "Zack Hable"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "SAODEC: Signature Approximate Order Dependency Efficient Compression"
+      advisors: ["panos-chrysanthis", "constantinos-costa"]
+      month: 5
+      year: 2021
+
+- id: "jonathan-albert"
+  fullname: "Jonathan Michael Albert"
+  shortname: "Jonathan Michael Albert"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Optimizing EPUI's backend server"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2019
+
+- id: "krithika-ganesh"
+  fullname: "Krithika Ganesh"
+  shortname: "Krithika Ganesh"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Curation and Pattern Detection in Real Time Log Streams"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2019
+
+- id: "mark-silvis"
+  fullname: "Mark Silvis"
+  shortname: "Mark Silvis"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/mark_silvis.jpg"
+  degrees:
+    - level: "ms"
+      title: "PittGrub: A Frustration-Free System to Reduce Food Waste by Notifying Hungry College Students"
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2018
+
+- id: "ameya-daphalapurkar"
+  fullname: "Ameya Daphalapurkar"
+  shortname: "Ameya Daphalapurkar"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/ameya_daphalapurkar.jpg"
+  degrees:
+    - level: "ms"
+      title: "Android client for Mobile Person Guide"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2017
+
+- id: "eric-gratta"
+  fullname: "Eric Gratta"
+  shortname: "Eric Gratta"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/eric_gratta.jpg"
+  degrees:
+    - level: "ms"
+      title: "AstroShelf"
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2016
+
+- id: "samanvoy-panati"
+  fullname: "Samanvoy Reddy Panati"
+  shortname: "Samanvoy Reddy Panati"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/samanvoy_panati.jpg"
+  degrees:
+    - level: "ms"
+      title: "Mobile Personal Guide: The Case of Preferential Diverse Routing"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2016
+
+- id: "jose-joseph"
+  fullname: "Jose Michael Joseph"
+  shortname: "Jose Michael Joseph"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/jose_michael_joseph.jpg"
+  degrees:
+    - level: "ms"
+      title: "Efficient Processing of Aggregate Continuous Queries"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2016
+
+- id: "wen-gao"
+  fullname: "Wen Gao"
+  shortname: "Wen Gao"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/wen_gao.jpg"
+  degrees:
+    - level: "ms"
+      title: "Open Access ADMT Library"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 4
+      year: 2014
+
+- id: "di-bao"
+  fullname: "Di Bao"
+  shortname: "Di Bao"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/di_bao.jpg"
+  degrees:
+    - level: "ms"
+      title: "SNeT - Computer-Assisted Supernovae Tracking"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2013
+
+- id: "daniel-walker"
+  fullname: "Daniel E. Walker"
+  shortname: "Daniel Walker"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "GPU Database Systems"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2013
+
+- id: "alex-connor"
+  fullname: "Alex Connor"
+  shortname: "Alex Connor"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "ARIADNE: A Novel High Availability Cloud Data Store with Transactional Guarantees"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 4
+      year: 2011
+
+- id: "jesse-szwedko"
+  fullname: "Jesse Szwedko"
+  shortname: "Jesse Szwedko"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/jesse_szwedko.jpg"
+  degrees:
+    - level: "ms"
+      title: "Visualization of Energy Consumption of Continuous Query Processing with Mobile Clients"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 4
+      year: 2011
+
+- id: "sean-snyder"
+  fullname: "Sean Snyder"
+  shortname: "Sean Snyder"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/sean_snyder.jpg"
+  degrees:
+    - level: "ms"
+      title: "QMD: Exploiting Flash for Energy Efficient Disk Arrays"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2011
+
+- id: "aimee-brown"
+  fullname: "Aimee Pail Brown"
+  shortname: "Aimee Pail Brown"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2007
+
+- id: "david-kleinman"
+  fullname: "David Kleinman"
+  shortname: "David Kleinman"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/david_kleinman.jpg"
+  degrees:
+    - level: "ms"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 12
+      year: 2006
+
+- id: "ganesh-santhanakrishnan"
+  fullname: "Ganesh Santhanakrishnan"
+  shortname: "Ganesh Santhanakrishnan"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Self-Tuning Caching Algorithms"
+      advisors: ["panos-chrysanthis", "ahmed-amer"]
+      month: 4
+      year: 2005
+
+- id: "swati-gupta"
+  fullname: "Swati Gupta"
+  shortname: "Swati Gupta"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Performance Evaluation of Broadcast Indexing Schemes"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2003
+
+- id: "oleg-shigiltchoff"
+  fullname: "Oleg Shigiltchoff"
+  shortname: "Oleg Shigiltchoff"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/oleg_shigiltchoff.jpg"
+  degrees:
+    - level: "ms"
+      title: "Multiversion Data Dissemination: Broadcast Organizations and Caching"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2003
+
+- id: "patrick-herron"
+  fullname: "Patrick Herron"
+  shortname: "Patrick Herron"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Multi-channel Data Broadcasting"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2003
+
+- id: "zhen-liu"
+  fullname: "Zhen Liu"
+  shortname: "Zhen Liu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Evaluating Caching Schemes for High Volume Updates and Queries"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2003
+
+- id: "vince-penkrot"
+  fullname: "Vince Penkrot"
+  shortname: "Vince Penkrot"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/vince_penkrot.jpg"
+  degrees:
+    - level: "ms"
+      title: "Interfacing Real-time Outbreak and Disease Surveillance with Multicast Data Dissemination Middleware"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2002
+
+- id: "thalis-kalfigopoulos"
+  fullname: "Thalis Kalfigopoulos"
+  shortname: "Thalis Kalfigopoulos"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Utilizing XML in e-Service Marketplaces"
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2002
+
+- id: "ruchi-agrawal"
+  fullname: "Ruchi Agrawal"
+  shortname: "Ruchi Agrawal"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Accessing Broadcast Data on Multiple Channels in Mobile Environment more Efficiently"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2000
+
+- id: "george-kyrou"
+  fullname: "George Kyrou"
+  shortname: "George Kyrou"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "DTPSim: Distributed Transaction Processing Simulator"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2000
+
+- id: "kasi-somayajula"
+  fullname: "Kasi Somayajula"
+  shortname: "Kasi Somayajula"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Mobile Query Materialization"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 1996
+
+- id: "anand-despande"
+  fullname: "Anand Despande"
+  shortname: "Anand Despande"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/anand_despande.jpg"
+  degrees:
+    - level: "ms"
+      title: "Read-only Optimization for the Group Two-Phase Locking Protocol"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2000
+
+- id: "jeff-pike"
+  fullname: "Jeff Pike"
+  shortname: "Jeff Pike"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/jeff_pike.jpg"
+  degrees:
+    - level: "ms"
+      title: "Evaluation of Atomic Commit Protocols in Wide-Area Network Environments"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 1999
+
+- id: "ken-tew"
+  fullname: "Ken Tew"
+  shortname: "Ken Tew"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Process Scheduling with Temporal and Memory Constraints"
+      advisors: ["panos-chrysanthis"]
+      month: 9
+      year: 1996
+
+- id: "ramesh-seshadri"
+  fullname: "Ramesh Seshadri"
+  shortname: "Ramesh Seshadri"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Implementation of Scheduling Tool as a Workflow Application using CORBA"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1996
+
+- id: "john-candee"
+  fullname: "John Candee"
+  shortname: "John Candee"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Exploration and Adaptation of a Commercially Available Network Interface for Remote Database Access across Heterogeneous Operating Systems"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1994
+
+- id: "rakesh-aggarwal"
+  fullname: "Rakesh K. Aggarwal"
+  shortname: "Rakesh Aggarwal"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/rakesh_aggarwal.jpg"
+  degrees:
+    - level: "ms"
+      title: "Development of a Client with an X-Window Interface to Access a Remote Database"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1994
+
+- id: "gary-wallborn"
+  fullname: "Gary D. Wallborn"
+  shortname: "Gary Wallborn"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/gary_walborn.jpg"
+  degrees:
+    - level: "ms"
+      title: "Disconnected Mobile Database Operations"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 1994
+
+- id: "neeta-borle"
+  fullname: "Neeta Borle"
+  shortname: "Neeta Borle"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Computer Science Department's Publication Database"
+      advisors: ["panos-chrysanthis"]
+      month: 6
+      year: 1993
+
+- id: "chad-visino"
+  fullname: "Chad Visino"
+  shortname: "Chad Visino"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: ""
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2001
+
+- id: "siddhartha-roychowdhury"
+  fullname: "Siddhartha Roychowdhury"
+  shortname: "Siddhartha Roychowdhury"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: ""
+      advisors: ["panos-chrysanthis"]
+      month: 8
+      year: 2002
+
+- id: "jie-xu"
+  fullname: "Jie Xu"
+  shortname: "Jie Xu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/jie_xu.jpg"
+  degrees:
+    - level: "ms"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 4
+      year: 2008
+
+- id: "ruhsary-rexit"
+  fullname: "Ruhsary Rexit"
+  shortname: "Ruhsary Rexit"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/ruhsary_rexit.jpg"
+  degrees:
+    - level: "ms"
+      title: "Data Mining in Bioinformatics"
+      advisors: ["alexandros-labrinidis", "panos-chrysanthis"]
+      month: 4
+      year: 2014
+
+- id: "manali-shimpi"
+  fullname: "Manali Shimpi"
+  shortname: "Manali Shimpi"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Visualizing Route Recommendations in Urban Places"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2017
+
+- id: "benjamin-graybill"
+  fullname: "Benjamin C. Graybill"
+  shortname: "Ben Graybill"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "BLE Logger for CAPRIO"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2021
+
+- id: "yuxin-liu"
+  fullname: "Yuxin Liu"
+  shortname: "Yuxin Liu"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Azure Chatbot for CAPRIO"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2022
+
+- id: "zhiyong-chen"
+  fullname: "Zhiyong Chen"
+  shortname: "Zhiyong Chen"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "ms"
+      title: "Intent Recognition and Time Extraction for CAPRIO Chatbot"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2023
+
+- id: "sayantani-bhattacharjee"
+  fullname: "Sayantani Bhattacharjee"
+  shortname: "Sayantani Bhattacharjee"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/sayantani.jpg"
+  degrees:
+    - level: "bs"
+      title: "MS Research Intern with Panos K. Chrysanthis"
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2021
+
+- id: "chihao-sun"
+  fullname: "Chihao Sun"
+  shortname: "Chihao Sun"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/chihao_sun.jpg"
+  degrees:
+    - level: "bs"
+      title: "EPUI: Experimental Platform for Urban Informatics"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2018
+
+- id: "daniel-shirer"
+  fullname: "Daniel John Shirer"
+  shortname: "Daniel John Shirer"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/daniel_shirer.jpg"
+  degrees:
+    - level: "bs"
+      title: "Comparative Study of Approaches for Predicting Patient's outcome"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2018
+
+- id: "abi-paonessa"
+  fullname: "Abi Paonessa"
+  shortname: "Abi Paonessa"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: "Cancer Biomedical Data Platform"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2018
+
+- id: "kathryn-blythe"
+  fullname: "Kathryn Marie Blythe"
+  shortname: "Kathryn Marie Blythe"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/kathryn_blythe.jpg"
+  degrees:
+    - level: "bs"
+      title: "Cancer Biomedical Data Platform"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2018
+
+- id: "seth-stayer"
+  fullname: "Seth Stayer"
+  shortname: "Seth Stayer"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: "Research Topic: Data Science"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2017
+
+- id: "jaziel-torres-fuentes"
+  fullname: "Jaziel Torres-Fuentes"
+  shortname: "Jaziel Torres-Fuentes"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: "iBRIC Intern from University of Puerto Rico - Research Topic: Urban Informatics"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2017
+
+- id: "darpun-kohli"
+  fullname: "Darpun Kohli"
+  shortname: "Darpun Kohli"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/darpun_kohli.jpg"
+  degrees:
+    - level: "bs"
+      title: "First Experience in Research (FER): Urban Informatics"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2017
+
+- id: "alice-lai"
+  fullname: "Alice Lai"
+  shortname: "Alice Lai"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: ""
+      advisors: ["alexandros-labrinidis"]
+      month: 8
+      year: 2012
+
+- id: "alexi-green"
+  fullname: "Alexi Green"
+  shortname: "Alexi Green"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: ""
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2021
+
+- id: "lucas-leiby"
+  fullname: "Lucas Leiby"
+  shortname: "Lucas Leiby"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/user-profile.jpg"
+  degrees:
+    - level: "bs"
+      title: "Thinking Inclusively with CAPRIO"
+      advisors: ["panos-chrysanthis"]
+      month: 4
+      year: 2022
+
+- id: "anna-baskin"
+  fullname: "Anna Baskin"
+  shortname: "Anna Baskin"
+  roles: ["alumni"]
+  department: "Computer Science"
+  image: "../assets/people/Anna-Baskin.png"
+  degrees:
+    - level: "bs"
+      title: "RETSINA: Reproducibility and Experimentation Testbed for Signal-Strength Indoor Near Analysis - Research Intern on the Data Postdiction project with Brian T. Nixon."
+      advisors: ["panos-chrysanthis"]
+      month: 12
+      year: 2023

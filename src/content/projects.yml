@@ -1,0 +1,352 @@
+- id: "causal-mgm"
+  link: true
+  title: "CausalMGM: A Web-Based Causal Discovery Tool for Mixed Datasets"
+  shortTitle: "CausalMGM"
+  shortDesc: "CausalMGM is a data analysis tool to explore large, complex datasets. The method learns a graphical model of the data where the nodes are variables and edges display the dependencies among variables."
+  description: |
+    High-throughput sequencing and the availability of large online data repositories (e.g. The Cancer Genome Atlas and Trans-Omics for Precision Medicine) have the potential to revolutionize systems biology by enabling researchers to study interactions between data from different modalities (i.e. genetic, genomic, clinical, behavioral, etc.). Currently, data mining and statistical approaches are confined to identifying correlates in these datasets, but researchers are often interested in identifying cause-and-effect relationships. Causal discovery methods were developed to infer such cause-and-effect relationships from observational data. Though these algorithms have had demonstrated successes in several biomedical applications, they are difficult to use for non-experts. So, there is a need for web-based tools to make causal discovery methods accessible. 
+    
+    Here, we present [CausalMGM](http://causalmgm.org/), the first web-based causal discovery tool that enables researchers to find cause-and-effect relationships from observational data. Web-based CausalMGM consists of three data analysis tools: (i) feature selection and clustering; (ii) automated identification of cause-and-effect relationships via a graphical model; and (iii) interactive visualization of the learned causal (directed) graph. We demonstrate how CausalMGM enables an end-to-end exploratory analysis of biomedical datasets, giving researchers a clearer picture of its capabilities.
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "takis-benos"
+    collaborators: []
+    gradStudents: 
+      - "xiaoyu-ge" 
+      - "vineet-raghu" 
+      - "xiaozhong-zhang"
+    ugradStudents: []
+  grants: 
+    - "National Institutes of Health [U01HL137159 and R01L M012087 to P.V.B.; T32CA082084 to V.K.R.]. Funding for open access charge: National Institutes of Health [R01LM012087]"
+  links:
+    - label: "CausalMGM Website"
+      url: "http://causalmgm.org/"
+  press: []
+
+- id: "polar"
+  link: true
+  title: "PoLAR: Postdiction of Large Archival Repositories"
+  shortTitle: "PoLAR: Data Postdiction"
+  shortDesc: "The ever-increasing demand to use and store data in perpetuity is limited by storage cost, which is decreasing slowly compared to computational power's exponential growth."
+  description: |
+    The ever-increasing demand to use and store data in perpetuity is limited by storage cost, which is decreasing slowly compared to computational power's exponential growth. Under these circumstances, the deliberate loss of detail in data as it ages (referred to as data decay) is useful because it allows the cost of storing data to decrease alongside the data's utility. The idea of data postdiction as a data decay method uses machine learning techniques to recover previously deleted values from data storage. This project proposes and evaluates a new pipeline using clustering, outlier detection, machine learning, and accuracy tuning to implement an effective data postdiction for archiving data. Overall, the goal is to train a machine learning model to estimate database features, allowing for the deletion of entire columns, which can later be reconstructed within some threshold of accuracy using the stored models. We evaluate the effectiveness of our postdiction pipeline in terms of storage reduction and data recovery accuracy using a real healthcare dataset. Our preliminary results show that the order in which outlier detection, clustering, and machine learning methods are applied leads to different trade-offs in terms of storage and recovery accuracy.
+
+    Please refer to the first paper published at [ADBIS'23](https://link.springer.com/chapter/10.1007/978-3-031-42941-5_5).
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "constantinos-costa"
+    collaborators: []
+    gradStudents: 
+      - "brian-nixon"
+      - "trevor-petersen" 
+      - "robbie-fishel"
+    ugradStudents: 
+      - "anna-baskin"
+  grants: []
+  links: []
+  press: []
+
+- id: "caprio"
+  link: false
+  title: "CAPRIO: Context-Aware Path Recommendation exploiting Indoor and Outdoor information"
+  shortTitle: "CAPRIO"
+  shortDesc: "A novel graph-based data integration and routing system that leverages graph exploration algorithms and systems to unify both indoor and outdoor information."
+  description: "A novel graph-based data integration and routing system that leverages graph exploration algorithms and systems to unify both indoor and outdoor information."
+  team:
+    faculty: 
+      - "panos-chrysanthis" 
+      - "constantinos-costa"
+    collaborators: []
+    gradStudents: 
+      - "brian-nixon"
+      - "vasilis-sarris"
+    ugradStudents: []
+  grants: []
+  links: []
+  press: []
+
+- id: "aqsios"
+  link: false
+  title: "AQSIOS: Algorithms and Metrics for New Generation Data Stream Management Systems"
+  shortTitle: "AQSIOS"
+  shortDesc: "The goal of this project is to design a new generation of data stream management systems (DSMSs), with equal emphasis on optimizing performance and enhancing functionality."
+  description: "The goal of this project is to design a new generation of data stream management systems (DSMSs), with equal emphasis on optimizing performance and enhancing functionality."
+  team:
+    faculty: []
+    collaborators: []
+    gradStudents: []
+    ugradStudents: []
+  grants: []
+  links: []
+  press: []
+
+- id: "covid-reduce"
+  link: false
+  title: "CovidReduce"
+  shortTitle: "CovidReduce"
+  shortDesc: "The CovidReduce group formed in April 2020 led by Prof. Panos K. Chrysanthis (Computer Science) and Prof. Walter Schneider with the goal of providing tools to reduce COVID infection rates."
+  description: "The CovidReduce group formed in April 2020 led by Prof. Panos K. Chrysanthis (Computer Science) and Prof. Walter Schneider (LRDC, Psychology, Bioengineering, Neurosurgery and Radiology) with the goal of providing tools to reduce COVID infection rates in Allegheny county and beyond."
+  team:
+    faculty: 
+      - "panos-chrysanthis" 
+      - "walter-schneider"
+    collaborators: []
+    gradStudents: []
+    ugradStudents: []
+  grants: []
+  links: []
+  press: []
+
+- id: "career"
+  link: true
+  title: "CAREER: User-Centric Data Management"
+  shortTitle: "User-Centric Data Management"
+  shortDesc: "The Web has permeated every facet of human activity. Web 2.0 is bringing a sea-change, both by the amount of user-generated content and by the level of automation for information exchange."
+  description: |
+    The Web has permeated every facet of human activity. Web 2.0 is bringing a sea-change, both by the amount of user-generated content and by the level of automation for information exchange. The goal of this project is to promote quality on the Web into a first-class citizen, by (1) exposing quality information from Web data sources, (2) empowering users to specify their preferences for the different dimensions of quality (Quality of Service, Quality of Data, Quality of Information) through an intuitive, integrated framework, called Quality Agreements (QAs), and (3) influencing resource allocation decisions according to user preferences. Towards this, the project reexamines query processing techniques in order to consider QAs (namely, query and update scheduling, caching and replication, and admission control) and addresses new challenges, stemming from the users' need to adapt QAs over time and their ability to collaborate. Project plans include the validation of the QA framework with a user-study, the evaluation of the proposed algorithms analytically and experimentally, and prototype development. The experimental aspects of this research are directly linked to the educational goals of this project and will generate many opportunities for graduate, undergraduate, and high-school students to participate in the research and development of new technologies. This project will empower users to tailor quality on the Web according to their preferences, which in turn can have great implications on the usability of Web 2.0 applications and on users' experience and satisfaction. Results of this research, including software, data, and publications, will be made publicly available via the [project web site](https://admt2501.cs.pitt.edu/user-centric).
+  team:
+    faculty: 
+      - "alexandros-labrinidis"
+    collaborators: []
+    gradStudents: 
+      - "lory-moakar"
+      - "jie-xu"
+      - "roxana-gheorghiu"
+      - "thao-pham"
+      - "panayiotis-neophytou"
+      - "sean-snyder"
+      - "di-bao"
+      - "cory-thoma"
+      - "Zitao Liu"
+      - "wen-gao"
+    ugradStudents: 
+      - "jesse-szwedko"
+      - "Callen Shaw"
+      - "Brian Wangchaowart"
+      - "Katlyn Daniluk"
+      - "Alice Lai"
+      - "Alec Jasen"
+      - "Jake Lyons"
+      - "Joel Roggeman"
+  grants: 
+    - "NSF IIS-0746696 (PI: Alexandros Labrinidis) [NSF Abstract](https://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0746696)"
+  links: []
+  press:
+    - label: "Spotlight Article"
+      url: "https://www.cs.pitt.edu/spotlight/faculty/2008/labrinidis.php"
+    - label: "Pitt Chronicle"
+      url: "https://www.chronicle.pitt.edu/?p=1561"
+    - label: "University Times"
+      url: "https://mac10.umc.pitt.edu/u/FMPro?-DB=ustory&-Format=d.html&-lay=a&storyid=8233&-Find"
+
+- id: "astroshelf"
+  link: true
+  title: "AstroShelf"
+  shortTitle: "AstroShelf"
+  shortDesc: "The growing onslaught of astronomical data available presents a great challenge. Astronomy lacks an easy-to-use and scalable way to collect and distribute expert information about objects."
+  description: |
+    The growing onslaught of astronomical data available presents a great challenge. Astronomy lacks an easy-to-use and scalable way to collect and distribute expert information about objects from datasets of tens of thousands to billions of individual events and objects. Over the next decade, the amount of information available to the typical astronomer will grow by two orders of magnitude both in raw data size and in the number of objects. 
+
+    This project pursues three research directions, each of which has the potential to transform how astronomers interface with large datasets: (1) a scalable annotation framework to enable linking of observations to specific experiments, models, or other observations; (2) a continuous workflow enactment system that would support automated reasoning in the presence of uncertainty; and (3) a computational framework for interactively analyzing astronomical datasets, allowing the construction and testing of hypotheses.
+
+    Project plans include the design and development of a prototype system (AstroShelf) and its evaluation using two timely science programs: (a) Using multi-wavelength data from the DEEP3 and AEGIS surveys, develop methods to incorporate images and catalogs from disparate datasets, allowing us to study how the demographics of galaxies have changed over the last 8 billion years. (b) Using properties of time-variable events found by the Pan-STARRS survey, develop techniques for rapid classification of transient phenomena, dissemination of their properties, and incorporation of feedback from follow-up observations. AstroShelf will include a publicly accessible, flexible annotation system for public datasets, which will also lend itself to outreach efforts involving annotations by the general public.
+
+    This project's significant impact is the ability to share information and expert opinions quickly and widely, about each new observation or event, fundamentally changing our ability to learn about the Universe; such functionality can also be applied in support of other scientific domains.
+
+    The AstroShelf project ended on August 31, 2016.
+
+    The code for the project has been released on [GitHub](https://github.com/admtlab/astroshelfv3/).
+
+    There are two accompanying videos that summarize/demonstrate the AstroShelf project from a regular [user point of view](https://bit.ly/astroshelf1) and from a [programmer point of view](https://bit.ly/astroshelf2).
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "Arthur Kosowsky (Physics and Astronomy)"
+      - "alexandros-labrinidis"
+      - "Liz Marai"
+      - "Jeffrey A. Newman (Physics and Astronomy)"
+      - "Michael Wood-Vasey (Physics and Astronomy)"
+    collaborators: []
+    gradStudents: []
+    ugradStudents: []
+  grants: 
+    - "NSF OIA-1028162 (PI: Alexandros Labrinidis; Co-PIs: Panos Chyrsanthis, Jeffrey Newman, Georgeta Marai, Willaim Wood-Vasey) [NSF Abstract](https://nsf.gov/awardsearch/showAward.do?AwardNumber=1028162)"
+  links:
+    - label: "Interdisciplinary Visualization Research"
+      url: "https://vis.cs.pitt.edu"
+  press:
+    - label: "Pitt Chronicle"
+      url: "https://www.chronicle.pitt.edu/?p=8931"
+    - label: "University Times"
+      url: "https://www.utimes.pitt.edu/?p=17172"
+    - label: "Pittsburgh Tribune-Review"
+      url: "https://www.pittsburghlive.com/x/pittsburghtrib/news/pittsburgh/s_744979.html"
+    - label: "Pitt News"
+      url: "https://www.news.pitt.edu/news/NSF-Astro-Shelf-survey"
+
+- id: "eetp"
+  link: true
+  title: "Energy-Efficient Transaction Processing"
+  shortTitle: "Energy-Efficient Transaction Processing"
+  shortDesc: "Compared to early Transaction Processing (TP) systems, today's TP systems have seen dramatic changes in both application requirements and underlying hardware support."
+  description: |
+    Compared to early Transaction Processing (TP) systems, today's TP systems have seen dramatic changes in both application requirements and underlying hardware support. As such, existing algorithms and design decisions hardly reflect reality and require revisiting them. However, more importantly, future generation TP systems must also necessarily evolve because of the emergence of energy efficiency as a first order design consideration.
+
+    This project is an early venture into a very new area, seeking to identify the most appropriate metrics for energy efficiency (QoE) in TP environments, the most appropriate ways to combine these energy efficiency metrics with existing quality of service (QoS) metrics and the most appropriate ways to specify any trade-off between QoE and QoS. Project plans also include the development of new scheduling algorithms and new TP system components that optimize a particular metric under different hardware configurations, as well as the experimental evaluation of the developed algorithms on simulation platforms and on real, state-of-the-art hardware.
+
+    This exploration has the potential to have a great impact in the development of new data management technologies. It is expected to advance the knowledge and understanding of the interplay among modern hardware components and facilitate the development of next generation TP systems that exploit new hardware features with the potential to achieve significant energy savings. This understanding could help formulate the foundations of the important area of energy-efficient data management, and thus contribute to the societal goal of energy conservation and sustainability.
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "alexandros-labrinidis"
+    collaborators: 
+      - "shimin-chen"
+    gradStudents: 
+      - "sean-snyder"
+    ugradStudents: 
+      - "Katlyn Daniluk (Summer Intern 2010)"
+  grants: 
+    - "NSF IIS-1050301 (PI: Panos K. Chrysanthis; Co-PIs: Alexandros Labrinids) [NSF Abstract](https://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1050301)"
+  links:
+    - label: "Energy-Efficient Transaction Processing"
+      url: "https://energy.cs.pitt.edu"
+    - label: "Sustainable Energy Efficient Data Management Workshop"
+      url: "https://seedm.org"
+  press: []
+
+- id: "confluence"
+  link: true
+  title: "CONFLuEnCE: CONtinuous workFLows ExeCution Engine"
+  shortTitle: "CONFLuEnCE"
+  shortDesc: "Data streams have become pervasive and data production rates are increasing exponentially, driven by advances in technology, for example the proliferation of sensors, smart phones, and their applications."
+  description: |
+    Data streams have become pervasive and data production rates are increasing exponentially, driven by advances in technology, for example the proliferation of sensors, smart phones, and their applications. This fact effectuates an unprecedented opportunity to build real-time monitoring and analytics applications, which when used collaboratively and interactively, will provide insights to every aspect of our environment, both in the business and scientific domains.
+
+    We have identified the need for workflow management systems which are capable of orchestrating the processing of multiple heterogeneous data streams, while enabling their users to interact collaboratively with the workflows in real-time. Based on that model we have built our prototype workflow enactments system: CONFLuEnCE (CONtinuous workFLow ExeCution Engine). CONFLuEnCE is built on top of Kepler, an existing workflow management system, by fusing stream semantics and stream processing methods as another computational domain. Furthermore, we have designed and implemented real-life business and scientific continuous workflow monitoring applications, which attest to the ease of use and applicability of our system.
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "alexandros-labrinidis"
+    collaborators: []
+    gradStudents: 
+      - "panayiotis-neophytou"
+    ugradStudents: []
+  grants: 
+    - "Partially funded by NSF OIA-1028162 (PI: Alexandros Labrinidis; Co-PIs: Panos Chrysanthis, Jeffrey Newman, Georgeta Marai, William Wood-Vasey) [NSF Abstract](https://nsf.gov/awardsearch/showAward.do?AwardNumber=1028162)"
+  links: []
+  press: []
+
+- id: "cmpi"
+  link: true
+  title: "CMPI"
+  shortTitle: "CMPI"
+  shortDesc: "The Center for Modeling Pulmonary Immunity is a joint effort between the University of Pittsburgh, Carnegie Mellon University and the University of Michigan."
+  description: |
+    The Center for Modeling Pulmonary Immunity is a joint effort between the University of Pittsburgh, Carnegie Mellon University and the University of Michigan, funded by the National Institute of Allergy and Infectious Diseases (NIAID) of the National Institutes of Health (NIH).
+
+    The center was established in September 2005 in order to study local pulmonary immune responses in response to biodefense pathogens.
+
+    The center will capitalize on a longstanding tradition of collaboration between immunologists and mathematicians and computer scientists from the University of Pittsburgh, Carnegie Mellon University and the University of Michigan for the purpose of developing mathematical models of the immune system.
+
+    Funding for the Center comes from the National Institute of Allergy and Infectious Diseases (NIAID) of the National Institutes of Health (NIH), under the Modeling Immunity for Biodefense project (RFP NIH-NIAID-DAIT-BAA-05-10).
+  team:
+    faculty: 
+      - "Penelope A. Morel, MD (University of Pittsburgh, Dept. of Immunology)"
+      - "takis-benos"
+      - "panos-chrysanthis"
+      - "JoAnne L. Flynn, PhD (University of Pittsburgh, Dept. of Molecular Genetics and Biochemistry)"
+      - "alexandros-labrinidis"
+      - "Gerard J. Nau, MD, PhD (University of Pittsburgh, Dept. of Molecular Genetics and Biochemistry)"
+      - "Ted M. Ross, PhD (University of Pittsburgh, Dept. of Molecular Genetics and Biochemistry)"
+      - "Russ Salter, PhD (University of Pittsburgh, Dept. of Immunology)"
+      - "Shlomo Taasan, PhD (Carnegie Mellon University, Dept. of Mathematical Sciences)"
+      - "Ziv Bar-Joseph, PhD (Carnegie Mellon University)"
+      - "Benoit Morel, PhD (Carnegie Mellon University, Dept. of Engineering and Public Policy / Physics)"
+      - "Denise Kirschner, PhD (University of Michigan, Dept. of Microbiology and Immunology)"
+      - "Simeone Marino, PhD (University of Michigan, Dept. of Microbiology and Immunology)"
+    collaborators: []
+    gradStudents: 
+      - "shenoda-guirguis"
+      - "panayiotis-neophytou"
+      - "roxana-gheorghiu"
+      - "jesse-szwedko"
+      - "alex-connor"
+      - "qinglan-li"
+    ugradStudents:
+      - "Chad Spensky"
+  grants:
+    - "IIS-0534531 (PI: Penelope A. Morel) Solicitation"
+  links:
+    - label: "CMPI Project page"
+      url: "https://cmpi.cs.pitt.edu/"
+  press: 
+    - label: "Article in the University Times: Research Notes: [Immune Modeling Center funded]"
+      url: "https://www.umc.pitt.edu:591/u/FMPro?-DB=ustory&-Format=d.html&-lay=a&storyid=4216&-Find"
+    - label: "Article in Pittsburgh Post-Gazette: [Pitt School of Medicine gets contract to help create virtual immune system]"
+      url: "https://www.post-gazette.com/pg/05343/619632.stm"
+    - label: "UPMC Press Release: [Mathematics used for discerning immune response to infectious diseases, vaccine development]"
+      url: "https://cmpi.cs.pitt.edu/press/2005/umpc-press-release-december-8-2005"
+
+- id: "citi"
+  link: true
+  title: "Secure CITI: A Secure Critical Information Technology Infrastructure for Disaster Management"
+  shortTitle: "Secure CITI"
+  shortDesc: "The Self-secure and robust Critical Information Technology Infrastructure project (S-CITI for short) aims at providing support to Emergency Managers (EMs) that are faced with management of resources and with decisions before, during, and after emergencies or disasters."
+  description: |
+    The Self-secure and robust Critical Information Technology Infrastructure project (S-CITI for short) aims at providing support to Emergency Managers (EMs) that are faced with management of resources and with decisions before, during, and after emergencies or disasters.
+
+    We will use new and existing sensors to gather data from the field, process this data to detect and predict emergency/disaster situations, and disseminate this data among the appropriate organizational units. The data flow will be done in a reliable and secure manner and EMs will coordinate actions in a Virtual Coordination Center, which need not be in a fixed (and thus vulnerable) physical location. The EMs are responsible for indicating what type of data is more valuable, so that S-CITI can display that information appropriately.
+
+    S-CITI is being funded through the ITR Medium Award ANI-0325353 from the National Science Foundation (NSF).
+  team:
+    faculty: 
+    - "Daniel Mosse"
+    - "Louise K. Comfort (Graduate School of Public and International Affairs Faculty, Yale University)"
+    - "Rami Melhem"
+    - "ahmed-amer"
+    - "José Carlos Brustoloni"
+    - "panos-chrysanthis"
+    - "Milos Hauskrecht"
+    - "alexandros-labrinidis"
+    - "kirk-pruhs"
+    collaborators: []
+    gradStudents: []
+    ugradStudents: []
+  grants: 
+    - "NSF ITR-ANI-0325353 (PI: Daniel Mosse'; Co-PIs: Louise Comfort, Rami Melhem) [NSF Abstract](https://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0325353)"
+  links:
+    - label: "Secure CITI Project"
+      url: "https://www.cs.pitt.edu/s-citi/index.html"
+  press: 
+    - label: "University Times: Pitt profs developing Secure-CITI of Pittsburgh"
+      url: "https://www.cs.pitt.edu/s-citi/news/ut2004-01-08.html"
+    - label: "Pittsburgh Business Times: Pitt system would report emergencies as they happen"
+      url: "https://www.cs.pitt.edu/s-citi/news/pc2004-01-05.html%20%3E%20Piitt%20Chronicle:%20%20Pitt%20Professors%20to%20Develop%20Pittsburgh%20Secure-CITI%3C/a%3E%20%3Cli%3E%20%3Ca%20href="
+    - label: "Pitt Professors to develop a Secure-CITI of Pittsburgh"
+      url: "https://www.cs.pitt.edu/s-citi/news/pr2003-12-10.html"
+ 
+- id: "mbdd"
+  link: true
+  title: "MBDD: Middleware for web-based multicast data dissemination"
+  shortTitle: "MBDD"
+  shortDesc: "Current unicast pull methods of data dissemination and do not scale well. For example, CNN's online network experienced nearly 10 times more traffic on the day of September 11, than it had the day before."
+  description: |
+    Current unicast pull methods of data dissemination and do not scale well. For example, CNN's online network experienced nearly 10 times more traffic on the day of September 11, than it had the day before. In order to meet this surge of demand, CNN had to drastically simplify their web pages. Multicast communication has been proposed as a solution to this scalability problem. However, no software solution currently exists that integrates the latest research in data management within a web based framework.
+
+    We have developed a software distribution that integrates multicast data dissemination into a web based framework. Our middleware consists of client and server side modules. The server side provides a web server that is capable of disseminating data by multicast.
+  team:
+    faculty: 
+      - "panos-chrysanthis"
+      - "kirk-pruhs"
+    cocollaborators: 
+      - "Vincenzo Liberatore (Case Western)"
+    gradStudents: []
+    ugradStudents: []
+  grants: 
+    - "NSF ITR-ANI-0325353 (PI: Panos K. Chrysanthis, Kirk Pruhs, Vincenzo Liberatore (CASE)) [NSF Abstract](https://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0123705&version=noscript)"
+  links:
+    - label: "Middleware for web-based multicast data dissemination"
+      url: "https://db.cs.pitt.edu/software/mbdd/"
+  press: []

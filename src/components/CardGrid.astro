@@ -1,0 +1,66 @@
+---
+export interface Props {
+  columns?: 1 | 2 | 3 | 4 | 5;
+  spacing?: 'tight' | 'normal' | 'loose';
+  responsive?: boolean;
+}
+
+const { 
+  columns = 3,
+  spacing = 'normal',
+  responsive = true
+} = Astro.props;
+
+let gridClass = 'grid';
+
+// Add column classes based on responsive prop
+if (responsive) {
+  switch (columns) {
+    case 1:
+      gridClass += ' gap-6';
+      break;
+    case 2:
+      gridClass += ' md:grid-cols-2 gap-6';
+      break;
+    case 3:
+      gridClass += ' md:grid-cols-2 lg:grid-cols-3 gap-4';
+      break;
+    case 4:
+      gridClass += ' md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3';
+      break;
+    case 5:
+      gridClass += ' md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3';
+      break;
+  }
+} else {
+  // Fixed columns, no responsive behavior
+  switch (columns) {
+    case 1:
+      gridClass += ' grid-cols-1 gap-6';
+      break;
+    case 2:
+      gridClass += ' grid-cols-2 gap-6';
+      break;
+    case 3:
+      gridClass += ' grid-cols-3 gap-4';
+      break;
+    case 4:
+      gridClass += ' grid-cols-4 gap-3';
+      break;
+    case 5:
+      gridClass += ' grid-cols-5 gap-3';
+      break;
+  }
+}
+
+// Override spacing if specified
+if (spacing === 'tight') {
+  gridClass = gridClass.replace(/gap-\d+/, 'gap-2');
+} else if (spacing === 'loose') {
+  gridClass = gridClass.replace(/gap-\d+/, 'gap-8');
+}
+---
+
+<div class={gridClass}>
+  <slot />
+</div>

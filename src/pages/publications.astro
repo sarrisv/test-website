@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import PubCard from '../components/PubCard.astro';
+import PageContainer from '../components/PageContainer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import { getPublications } from '../lib/pubUtils.js';
+
+const publicationsByYear = await getPublications();
+---
+
+<Base title="Publications">
+  <PageContainer>
+    <PageHeader 
+      title="Publications" 
+      subtitle="Research publications from the ADMT Lab" 
+    />
+
+    <div class="sticky top-4 z-10 mb-12">
+      <div class="relative">
+        <input 
+          type="text" 
+          id="pubSearch" 
+          placeholder="Search by title, author, venue, year..." 
+          class="input input-bordered w-full pr-20 shadow-lg"
+        />
+        <button 
+          id="clearSearch"
+          class="btn btn-ghost btn-sm absolute right-2 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity"
+          title="Clear search"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="searchStatus" class="text-sm text-base-content/70 mt-2 hidden"></div>
+    </div>
+
+    <div id="pubList">
+      {publicationsByYear.map(group => (
+        <section class="year-group mb-12">
+          <SectionTitle title={group.year.toString()} variant="primary" />
+          {group.papers.map(paper => (
+            <PubCard paper={paper} />
+          ))}
+        </section>
+      ))}
+    </div>
+  </PageContainer>
+
+  <!-- Enhanced Search Logic -->
+  <script is:inline>
+    const searchInput = document.getElementById('pubSearch');
+    const clearButton = document.getElementById('clearSearch');
+    const searchStatus = document.getElementById('searchStatus');
+    const entries = document.querySelectorAll('.pub-entry');
+    const sections = document.querySelectorAll('.year-group');
+    
+    let searchTimeout;
+    const totalEntries = entries.length;
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlightText(entry, terms) {
+      const targets = entry.querySelectorAll('h3, p');
+      
+      targets.forEach(target => {
+        const text = target.textContent;
+        
+        if (terms.length === 0) {
+           target.innerHTML = text;
+           return;
+        }
+
+        const pattern = terms.map(escapeRegExp).join('|');
+        const regex = new RegExp(`(${pattern})`, 'gi');
+        
+        target.innerHTML = text.replace(regex, '<mark class="bg-info/30 rounded-sm">$1</mark>');
+      });
+    }
+
+    // Reliable search function using inline styles (proven approach)
+    function performSearch(query) {
+      const searchTerms = query.toLowerCase().split(/\s+/).filter(term => term.length > 0);
+      let visibleCount = 0;
+
+      entries.forEach(entry => {
+        const text = entry.getAttribute('data-search-text');
+        
+        // Improved matching: all search terms must be found
+        const matches = searchTerms.length === 0 || searchTerms.every(term => text.includes(term));
+        
+        entry.style.display = matches ? 'block' : 'none';
+        if (matches) {
+          visibleCount++;
+          highlightText(entry, searchTerms);
+        }
+      });
+
+      // Hide year sections with no visible entries
+      sections.forEach(section => {
+        const visibleEntries = section.querySelectorAll('.pub-entry[style="display: block;"]');
+        section.style.display = visibleEntries.length > 0 || query === "" ? 'block' : 'none';
+      });
+
+      // Update search status
+      if (query === "") {
+        searchStatus.classList.add('hidden');
+        clearButton.classList.remove('opacity-100');
+        clearButton.classList.add('opacity-0');
+      } else {
+        searchStatus.classList.remove('hidden');
+        searchStatus.textContent = `Showing ${visibleCount} of ${totalEntries} publications`;
+        clearButton.classList.remove('opacity-0');
+        clearButton.classList.add('opacity-100');
+      }
+    }
+
+    // Debounced input handler
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        performSearch(e.target.value);
+      }, 150); // 150ms debounce
+    });
+
+    // Clear button functionality
+    clearButton.addEventListener('click', () => {
+      searchInput.value = '';
+      performSearch('');
+      searchInput.focus();
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Focus search with '/' key (like GitHub)
+      if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+      // Clear search with Escape key when search is focused
+      if (e.key === 'Escape' && e.target === searchInput) {
+        clearButton.click();
+      }
+    });
+
+    // Show all publications initially
+    performSearch('');
+  </script>
+</Base>
