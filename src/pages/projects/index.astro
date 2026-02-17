@@ -18,7 +18,7 @@ const projects = await getProjects();
 
     <CardGrid columns={2}>
       {projects.map((project) => (
-        <article class="card bg-base-100 shadow-xl border border-base-200 hover:border-primary/30 transition-all group">
+        <article class="card bg-base-100 shadow hover:shadow-lg transition-shadow border border-base-200 hover:border-primary/30 group">
           <div class="card-body">
             <header>
               <h2 class="card-title text-2xl group-hover:text-primary transition-colors">

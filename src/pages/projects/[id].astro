@@ -120,7 +120,7 @@ const { project, people } = Astro.props;
       )}
 
       {project.data.grants && project.data.grants.length > 0 && (
-        <div class="mb-8">
+        <div class="mb-12">
           <SectionTitle title="Grants" variant="primary" />
           <ul>
             {project.data.grants.map(grant => <li set:html={marked.parse(grant)} />)}
@@ -129,7 +129,7 @@ const { project, people } = Astro.props;
       )}
 
       {project.data.links && project.data.links.length > 0 && (
-        <div class="mb-8">
+        <div class="mb-12">
           <SectionTitle title="Links" variant="primary" />
           <ul>
             {project.data.links.map(link => (
@@ -140,7 +140,7 @@ const { project, people } = Astro.props;
       )}
 
       {project.data.press && project.data.press.length > 0 && (
-        <div class="mb-8">
+        <div class="mb-12">
           <SectionTitle title="Press Coverage" variant="primary" />
           <ul>
             {project.data.press.map(article => (

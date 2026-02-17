@@ -54,7 +54,7 @@ const { person, people } = Astro.props;
         <SectionTitle title="Degrees" variant="primary" />
         <div class="space-y-4">
           {person.data.degrees.map(degree => (
-            <div class="card bg-base-100 shadow">
+            <div class="card bg-base-100 shadow hover:shadow-lg transition-shadow">
               <div class="card-body py-4">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="badge badge-primary">
