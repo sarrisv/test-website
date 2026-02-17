@@ -49,7 +49,31 @@ const publicationsByYear = await getPublications();
     </div>
   </PageContainer>
 
-  <!-- Enhanced Search Logic -->
+  <!-- Shared BibTeX Modal -->
+  <dialog id="bibtexModal" class="modal">
+    <div class="modal-box w-11/12 max-w-3xl">
+      <h3 class="font-bold text-lg" aria-label="BibTeX Citation">BibTeX Citation</h3>
+      <div class="relative">
+        <pre class="bg-base-300 p-4 mt-4 rounded text-xs overflow-x-auto whitespace-pre-wrap font-mono"><code id="bibtexContent" class="language-bibtex"></code></pre>
+        <button 
+          id="copyBibtexBtn"
+          class="btn btn-xs btn-outline absolute top-6 right-2" 
+        >
+          Copy
+        </button>
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-outline">Close</button>
+        </form>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>Close</button>
+    </form>
+  </dialog>
+
+  <!-- Enhanced Search & Modal Logic -->
   <script is:inline>
     const searchInput = document.getElementById('pubSearch');
     const clearButton = document.getElementById('clearSearch');
@@ -57,8 +81,37 @@ const publicationsByYear = await getPublications();
     const entries = document.querySelectorAll('.pub-entry');
     const sections = document.querySelectorAll('.year-group');
     
+    // Modal Elements
+    const bibtexModal = document.getElementById('bibtexModal');
+    const bibtexContent = document.getElementById('bibtexContent');
+    const copyBibtexBtn = document.getElementById('copyBibtexBtn');
+    
     let searchTimeout;
     const totalEntries = entries.length;
+
+    // --- Modal Logic ---
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.js-bib-btn');
+      if (btn) {
+        const bibtex = decodeURIComponent(btn.dataset.bibtex);
+        bibtexContent.textContent = bibtex;
+        bibtexModal.showModal();
+      }
+    });
+
+    copyBibtexBtn.addEventListener('click', () => {
+      const text = bibtexContent.textContent;
+      navigator.clipboard.writeText(text);
+      
+      // Optional: Visual feedback
+      const originalText = copyBibtexBtn.textContent;
+      copyBibtexBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBibtexBtn.textContent = originalText;
+      }, 2000);
+    });
+
+    // --- Search Logic ---
 
     function escapeRegExp(string) {
       return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -82,7 +135,6 @@ const publicationsByYear = await getPublications();
       });
     }
 
-    // Reliable search function using inline styles (proven approach)
     function performSearch(query) {
       const searchTerms = query.toLowerCase().split(/\s+/).filter(term => term.length > 0);
       let visibleCount = 0;
@@ -90,7 +142,6 @@ const publicationsByYear = await getPublications();
       entries.forEach(entry => {
         const text = entry.getAttribute('data-search-text');
         
-        // Improved matching: all search terms must be found
         const matches = searchTerms.length === 0 || searchTerms.every(term => text.includes(term));
         
         entry.style.display = matches ? 'block' : 'none';
@@ -100,13 +151,11 @@ const publicationsByYear = await getPublications();
         }
       });
 
-      // Hide year sections with no visible entries
       sections.forEach(section => {
         const visibleEntries = section.querySelectorAll('.pub-entry[style="display: block;"]');
         section.style.display = visibleEntries.length > 0 || query === "" ? 'block' : 'none';
       });
 
-      // Update search status
       if (query === "") {
         searchStatus.classList.add('hidden');
         clearButton.classList.remove('opacity-100');
@@ -119,35 +168,29 @@ const publicationsByYear = await getPublications();
       }
     }
 
-    // Debounced input handler
     searchInput.addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         performSearch(e.target.value);
-      }, 150); // 150ms debounce
+      }, 150);
     });
 
-    // Clear button functionality
     clearButton.addEventListener('click', () => {
       searchInput.value = '';
       performSearch('');
       searchInput.focus();
     });
 
-    // Keyboard shortcuts
     document.addEventListener('keydown', (e) => {
-      // Focus search with '/' key (like GitHub)
       if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
         e.preventDefault();
         searchInput.focus();
       }
-      // Clear search with Escape key when search is focused
       if (e.key === 'Escape' && e.target === searchInput) {
         clearButton.click();
       }
     });
 
-    // Show all publications initially
     performSearch('');
   </script>
 </Base>

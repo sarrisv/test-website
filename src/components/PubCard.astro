@@ -1,16 +1,13 @@
 ---
 const { paper } = Astro.props;
 const authorList = paper.authors.map(a => `${a.given} ${a.family}`).join(", ");
-const modalId = `modal_${paper.id.replace(/[^a-zA-Z0-9]/g, '_')}`;
 
-// Create comprehensive search text including all searchable fields
 const searchableText = [
   paper.title,
   authorList,
   paper.venue || '',
   paper.year || '',
   paper.bibtex || '',
-  // Add any keywords or abstract if available
   paper.keywords || '',
   paper.abstract || ''
 ].join(' ').toLowerCase();
@@ -34,30 +31,12 @@ const searchableText = [
     {paper.code && (
       <a href={paper.code} target="_blank" class="btn btn-xs btn-outline">Code</a>
     )}
-    <button class="btn btn-xs btn-outline" onclick={`document.getElementById('${modalId}').showModal()`}>Bib</button>
+    <button 
+      class="btn btn-xs btn-outline js-bib-btn" 
+      data-bibtex={encodeURIComponent(paper.bibtex)}
+      aria-label="Bibtex Button"
+    >
+      Bib
+    </button>
   </div>
-
-  <!-- Cite Modal -->
-  <dialog id={modalId} class="modal">
-    <div class="modal-box w-11/12 max-w-3xl">
-      <h3 class="font-bold text-lg" aria-label="BibTeX Citation Dialog">BibTeX Citation</h3>
-      <div class="relative">
-        <pre class="bg-base-300 p-4 mt-4 rounded text-xs overflow-x-auto whitespace-pre-wrap font-mono"><code class="language-bibtex">{paper.bibtex}</code></pre>
-        <button 
-          class="btn btn-xs btn-outline absolute top-6 right-2" 
-          onclick={`navigator.clipboard.writeText(\`${paper.bibtex.replace(/`/g, '\\`')}\`)`}
-        >
-          Copy
-        </button>
-      </div>
-      <div class="modal-action">
-        <form method="dialog">
-          <button class="btn btn-outline">Close</button>
-        </form>
-      </div>
-    </div>
-    <form method="dialog" class="modal-backdrop">
-        <button>Close</button>
-      </form>
-  </dialog>
 </div>
